@@ -5,8 +5,8 @@
   <defs>
     <style>
       #tab-background-fill {
-        background-color: -moz-dialog;
-        background-image: linear-gradient(#F2F1F0, #F2F1F0);
+        background-color: #838689;
+        background-image: linear-gradient(#838689, #838689);
         background-repeat: no-repeat;
         height: 100%;
         width: 100%;

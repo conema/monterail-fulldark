@@ -115,3 +115,11 @@ menuseparator {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
 }
+
+#headers-parent {
+    background-color: var(--background-color-light);
+}
+
+#addressCol1\#1 {
+    color: #fff;
+}

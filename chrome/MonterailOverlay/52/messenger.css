@@ -62,5 +62,17 @@
 }
 
 .tab-background-middle[selected="true"] {
-    background-color: var(--background-color);
+    background-color: var(--background-color-light);
+}
+
+statusbar{
+    border: none;
+}
+
+#calendar-status-todaypane-button {
+    color: #fff;
+}
+
+#threadCols treecol {
+    background-color: #8c8c8c !important;
 }
