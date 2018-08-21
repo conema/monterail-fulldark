@@ -1,0 +1,44 @@
+#register window overlays
+style	chrome://messenger/content/addressbook/addressbook.xul			chrome://MonterailOverlay/skin/css/addressbook.css
+style	chrome://messenger/content/addressbook/abContactsPanel.xul		chrome://MonterailOverlay/skin/css/addressbook.css
+style	chrome://messenger/content/messengercompose/messengercompose.xul	chrome://MonterailOverlay/skin/css/compose.css
+style	chrome://messenger/content/messenger.xul				chrome://app_version/skin/messenger.css
+style	chrome://messenger/content/messageWindow.xul				chrome://app_version/skin/messenger.css
+style	chrome://calendar/content/calendar-event-dialog.xul			chrome://MonterailOverlay/skin/css/lightning.css
+
+#register theme
+skin	MonterailOverlay	classic/1.0	chrome/MonterailOverlay/classic/
+skin	MonterailOverlay	Monterail	chrome/MonterailOverlay/
+skin	app_version		Monterail	chrome/MonterailOverlay/52/
+skin	app_version		Monterail	chrome/MonterailOverlay/60/	appversion>=60a1
+skin	os_special		Monterail	chrome/MonterailOverlay/linux/
+skin	os_special		Monterail	chrome/MonterailOverlay/mac/	os=Darwin
+skin	os_special		Monterail	chrome/MonterailOverlay/win/	os=WINNT
+
+#overrides
+override chrome://messenger/skin/icons/caption-buttons.svg#minimize	chrome://MonterailOverlay/skin/icons/caption-buttons.svg#minimize	appversion<=55.0a1
+override chrome://messenger/skin/icons/caption-buttons.svg#maximize	chrome://MonterailOverlay/skin/icons/caption-buttons.svg#maximize	appversion<=55.0a1
+override chrome://messenger/skin/icons/caption-buttons.svg#restore	chrome://MonterailOverlay/skin/icons/caption-buttons.svg#restore	appversion<=55.0a1
+override chrome://messenger/skin/icons/caption-buttons.svg#close	chrome://MonterailOverlay/skin/icons/caption-buttons.svg#close		appversion<=55.0a1
+override chrome://messenger/skin/tabs/selected-start.svg		chrome://MonterailOverlay/skin/icons/selected-start.svg			appversion<=57.0a1
+override chrome://messenger/skin/tabs/selected-end.svg			chrome://MonterailOverlay/skin/icons/selected-end.svg			appversion<=57.0a1
+override chrome://messenger/skin/multimessageview.css			chrome://MonterailOverlay/skin/css/multiMessage.css
+override chrome://messagebody/skin/messageBody.css			chrome://messenger/skin/messageBody.css
+override chrome://global/skin/filefield.css				chrome://messenger/skin/filefield.css					os=Linux
+
+#toolkit overrides
+override chrome://global/skin/icons/close.png				chrome://global/skin/icons/close-win7.png		os=WINNT osversion<=6.1
+override chrome://global/skin/icons/close@2x.png			chrome://global/skin/icons/close-win7@2x.png		os=WINNT osversion<=6.1
+override chrome://global/skin/icons/close-inverted.png			chrome://global/skin/icons/close-inverted-win7.png	os=WINNT osversion<=6.1
+override chrome://global/skin/icons/close-inverted@2x.png		chrome://global/skin/icons/close-inverted-win7@2x.png	os=WINNT osversion<=6.1
+override chrome://global/skin/arrow/arrow-lft-hov.gif			chrome://global/skin/arrow/arrow-lft.gif
+override chrome://global/skin/arrow/arrow-rit-hov.gif			chrome://global/skin/arrow/arrow-rit.gif
+override chrome://mozapps/skin/extensions/category-dictionaries.png	chrome://mozapps/skin/extensions/dictionaryGeneric.png
+override chrome://mozapps/skin/extensions/category-experiments.png	chrome://mozapps/skin/extensions/experimentGeneric.png
+override chrome://mozapps/skin/extensions/category-extensions.svg	chrome://mozapps/skin/extensions/extensionGeneric.svg
+override chrome://mozapps/skin/extensions/category-languages.png	chrome://mozapps/skin/extensions/localeGeneric.png
+override chrome://mozapps/skin/extensions/category-themes.png		chrome://mozapps/skin/extensions/themeGeneric.png
+override chrome://mozapps/skin/plugins/notifyPluginCrashed.png		chrome://mozapps/skin/plugins/pluginGeneric-16.png
+override chrome://mozapps/skin/plugins/notifyPluginGeneric.png		chrome://mozapps/skin/plugins/pluginGeneric-16.png
+override chrome://mozapps/skin/xpinstall/xpinstallItemGeneric.png	chrome://mozapps/skin/extensions/extensionGeneric.png
+

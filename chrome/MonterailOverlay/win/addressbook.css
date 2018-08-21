@@ -1,0 +1,53 @@
+@import url(chrome://app_version/skin/addressbook.css);
+
+#dirTree > treechildren {
+  --treechildren-outline: none;
+  --treechildren-selectedColor: transparent;
+  --treechildren-2ndBorderColor: transparent;
+  --treechildren-focusColor: transparent;
+  --treechildren-selectedFocusColor: transparent;
+  --treechildren-currentColor: transparent;
+  --treechildren-hoverColor: transparent;
+  --treechildren-selectedBorder: transparent;
+  --treechildren-selectedBottomBorder: transparent;
+  --treechildren-selectedBackground: transparent;
+  --treechildren-currentFocusBorder: rgba(255,255,255,.3);
+  --treechildren-currentFocusBottomBorder: rgba(255,255,255,.3);
+  --treechildren-selectedFocusBorder: transparent;
+  --treechildren-selectedFocusBottomBorder: transparent;
+  --treechildren-selectedFocusBackground: transparent;
+  --treechildren-selectedFocusCurrentBorder: transparent;
+  --treechildren-selectedFocusCurrentBottomBorder: transparent;
+  --treechildren-hoverBorder: transparent;
+  --treechildren-hoverBottomBorder: transparent;
+  --treechildren-hoverCurrentBorder: transparent;
+  --treechildren-hoverCurrentBottomBorder: transparent;
+  --treechildren-hoverSelectedBorder: transparent;
+  --treechildren-hoverSelectedBottomBorder: transparent;
+}
+
+#abResultsTree > treechildren {
+  --treechildren-outline: none;
+  --treechildren-selectedColor: var(--tree-background-color-selected);
+  --treechildren-2ndBorderColor: transparent;
+  --treechildren-focusColor: transparent;
+  --treechildren-selectedFocusColor: transparent;
+  --treechildren-currentColor: transparent;
+  --treechildren-hoverColor: transparent;
+  --treechildren-selectedBorder: transparent;
+  --treechildren-selectedBottomBorder: transparent;
+  --treechildren-selectedBackground: transparent;
+  --treechildren-currentFocusBorder: var(--tree-background-color-selected);
+  --treechildren-currentFocusBottomBorder: var(--tree-background-color-selected);
+  --treechildren-selectedFocusBorder: transparent;
+  --treechildren-selectedFocusBottomBorder: transparent;
+  --treechildren-selectedFocusBackground: transparent;
+  --treechildren-selectedFocusCurrentBorder: transparent;
+  --treechildren-selectedFocusCurrentBottomBorder: transparent;
+  --treechildren-hoverBorder: transparent;
+  --treechildren-hoverBottomBorder: transparent;
+  --treechildren-hoverCurrentBorder: transparent;
+  --treechildren-hoverCurrentBottomBorder: transparent;
+  --treechildren-hoverSelectedBorder: transparent;
+  --treechildren-hoverSelectedBottomBorder: transparent;
+}

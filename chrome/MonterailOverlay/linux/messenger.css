@@ -1,0 +1,116 @@
+#titlebar {
+  -moz-appearance: none !important;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+#navigation-toolbox > #tabs-toolbar,
+#navigation-toolbox > #mail-toolbar-menubar2 {
+  -moz-appearance: none;
+}
+
+#titlebar:not(:-moz-lwtheme):not(:-moz-window-inactive),
+#navigation-toolbox > #tabs-toolbar:not(:-moz-lwtheme):not(:-moz-window-inactive),
+#navigation-toolbox > #mail-toolbar-menubar2:not(:-moz-lwtheme):not(:-moz-window-inactive) {
+  color: #fff;
+  background-color: var(--background-color) !important;
+}
+
+#titlebar:not(:-moz-lwtheme):-moz-window-inactive,
+#navigation-toolbox > #tabs-toolbar:not(:-moz-lwtheme):-moz-window-inactive,
+#navigation-toolbox > #mail-toolbar-menubar2:not(:-moz-lwtheme):-moz-window-inactive {
+  color: #ddd;
+  background-color: var(--background-color-inactive);
+}
+
+#mail-menubar,
+#mail-menubar > menu {
+  -moz-appearance: none;
+  color: inherit;
+}
+
+.tabmail-tab:not([selected]):not(:-moz-lwtheme) > .tab-stack > .tab-content > .tab-label-container {
+  color: inherit;
+}
+
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(odd) {
+  background-color: initial;
+}
+
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
+  background-color: var(--tree-background-color-selected);
+  opacity: 0.7 !important;
+}
+
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, focus) {
+  background-color: var(--tree-background-color-selected);
+  opacity: 0.7 !important;
+}
+
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(current, focus) {
+  background-color: var(--tree-background-color-selected);
+  opacity: 0.7 !important;
+  border-color: transparent;
+}
+
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
+  background-color: rgba(255,255,255,.1);
+}
+
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, current) {
+  background-color: rgba(255,255,255,.1);
+}
+
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, selected) {
+  background-color: var(--tree-background-color-selected);
+  opacity: 0.7 !important;
+}
+
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text,
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus) {
+  color: #ddd;
+}
+
+#threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(odd) {
+  background-color: initial;
+}
+
+#threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
+  background-color: var(--tree-background-color-selected);
+  opacity: 0.7 !important;
+}
+
+#threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, focus) {
+  background-color: var(--tree-background-color-selected);
+  opacity: 0.7 !important;
+}
+
+#threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(current, focus) {
+  background-color: transparent;
+  border-color: var(--tree-background-color-selected);
+  opacity: 0.7 !important;
+  border-style: solid;
+}
+
+#threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(current, selected, focus) {
+  background-color: var(--tree-background-color-selected);
+  opacity: 0.1 !important;
+  border-color: transparent;
+}
+
+#threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
+  background-color: var(--tree-background-color-hover);
+}
+
+#threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, current) {
+  background-color: var(--tree-background-color-hover);
+}
+
+#threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, selected) {
+  background-color: var(--tree-background-color-selected);
+}
+
+#threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected),
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus) {
+  color: #fff;
+}

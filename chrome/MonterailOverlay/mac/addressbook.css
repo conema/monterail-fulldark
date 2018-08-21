@@ -1,0 +1,87 @@
+#dirTreeBox > #dirTree,
+vbox > #abResultsTree,
+#dirTreeBox > #dirTree treechildren::-moz-tree-row(selected),
+vbox > #abResultsTree treechildren::-moz-tree-row(selected) {
+  -moz-appearance: none;
+}
+
+#dirTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
+  background-color: rgba(255,255,255,.2);
+}
+
+#dirTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, focus) {
+  background-color: rgba(255,255,255,.3);
+}
+
+#dirTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(current, focus) {
+  background-color: rgba(255,255,255,.35);
+  border-color: transparent;
+}
+
+#dirTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
+  background-color: rgba(255,255,255,.1);
+}
+
+#dirTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, current) {
+  background-color: rgba(255,255,255,.3);
+}
+
+#dirTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, selected) {
+  background-color: rgba(255,255,255,.35);
+}
+
+#dirTree > treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text,
+#dirTree > treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus) {
+  color: #ddd;
+}
+
+#abResultsTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row {
+  border: 1px solid transparent;
+}
+
+#abResultsTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
+  background-color: var(--tree-background-color-selected);
+}
+
+#abResultsTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, focus) {
+  background-color: var(--tree-background-color-selected);
+  opacity: 0.7;
+}
+
+#abResultsTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(current, focus) {
+  background-color: transparent;
+  background-color: var(--tree-background-color-selected);
+  opacity: 0.7;
+  border-style: solid;
+}
+
+#abResultsTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(current, selected, focus) {
+  background-color: var(--tree-background-color-selected);
+  border-color: transparent;
+}
+
+#abResultsTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
+  background-color: var(--tree-background-color-hover);
+  opacity: 0.3;
+}
+
+#abResultsTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, current) {
+  background-color: var(--tree-background-color-hover);
+  opacity: 0.7;
+}
+
+#abResultsTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, selected) {
+  background-color: var(--tree-background-color-selected);
+}
+
+#abResultsTree > treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected),
+#dirTree > treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus) {
+  color: #fff;
+}
+
+@media (min-resolution: 2dppx) {
+  treechildren::-moz-tree-image(DirCol),
+  treechildren::-moz-tree-image(GeneratedName) {
+    -moz-image-region: auto !important;
+  }
+}

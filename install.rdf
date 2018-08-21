@@ -1,0 +1,20 @@
+﻿<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>MonterailFullDark@conema.me</em:id>
+    <em:name>Monterail Full Dark</em:name>
+    <em:version>1</em:version>
+    <em:description>Monterail Full Dark, a Thunderbird theme inspired by the mockup of Monterail</em:description>
+    <em:creator>Emanuele Concas</em:creator>
+    <em:internalName>Monterail</em:internalName>
+    <em:type>4</em:type>
+    <em:homepageURL>https://addons.thunderbird.net/en-US/thunderbird/addon/monterail-dark/</em:homepageURL>
+
+    <em:targetApplication>
+      <Description>
+        <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
+        <em:minVersion>52.0</em:minVersion>
+        <em:maxVersion>60.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+  </Description>
+</RDF>

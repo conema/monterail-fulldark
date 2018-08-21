@@ -1,0 +1,111 @@
+#messengerWindow,
+#navigation-toolbox,
+#navigation-toolbox > #tabs-toolbar {
+  -moz-appearance: none;
+  color: inherit;
+}
+
+#messengerWindow:not(:-moz-lwtheme) > #titlebar {
+  -moz-appearance: none !important;
+}
+
+#messengerWindow > #titlebar:not(:-moz-lwtheme):not(:-moz-window-inactive) {
+  background-color: var(--background-color) !important;
+}
+
+#messengerWindow > #titlebar:not(:-moz-lwtheme):-moz-window-inactive {
+  background-color: var(--background-color-inactive);
+}
+
+.tabmail-tab:not([selected]):not(:-moz-lwtheme) {
+  color: inherit;
+  text-shadow: none;
+}
+
+#quick-filter-bar-main-bar,
+#quick-filter-bar-expando {
+  background: transparent !important;
+}
+
+#folderPaneBox > #folderTree,
+#folderPaneBox > #folderTree treechildren::-moz-tree-row(selected) {
+  -moz-appearance: none;
+}
+
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
+  background-color: var(--tree-background-color-selected);
+  opacity: 0.7 !important;
+}
+
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, focus) {
+  background-color: var(--tree-background-color-selected);
+  opacity: 0.7 !important;
+}
+
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(current, focus) {
+  background-color: var(--tree-background-color-selected);
+  opacity: 0.7 !important;
+  border-color: transparent;
+}
+
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
+  background-color: rgba(255,255,255,.1);
+}
+
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, current) {
+  background-color: rgba(255,255,255,.1);
+}
+
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, selected) {
+  background-color: var(--tree-background-color-selected);
+  opacity: 0.7 !important;
+}
+
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text,
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus) {
+  color: #ddd;
+}
+
+#threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row {
+  border: 1px solid transparent;
+}
+
+#threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
+  border-color: var(--tree-background-color-selected);
+  opacity: 0.7 !important;
+}
+
+#threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, focus) {
+  border-color: var(--tree-background-color-selected);
+  opacity: 0.7 !important;
+}
+
+#threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(current, focus) {
+  background-color: transparent;
+  border-color: var(--tree-background-color-selected);
+  opacity: 0.7 !important;
+  border-style: solid;
+}
+
+#threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(current, selected, focus) {
+  border-color: var(--tree-background-color-selected);
+  opacity: 0.1 !important;
+  border-color: transparent;
+}
+
+#threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
+  background-color: var(--tree-background-color-hover);
+}
+
+#threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, current) {
+  background-color: var(--tree-background-color-hover);
+}
+
+#threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, selected) {
+  background-color: var(--tree-background-color-selected);
+}
+
+#threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected),
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus) {
+  color: #fff;
+}

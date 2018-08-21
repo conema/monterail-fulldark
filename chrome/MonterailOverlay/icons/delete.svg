@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path fill="context-fill #666" d="M 6.82,11.3 H 9.2 L 9.34,8 H 6.69 Z"/>
+  <path fill="context-fill #666" d="M 9.35,7.3 9.5,4 H 6.52 l 0.14,3.3 z"/>
+  <path fill="context-fill #666" d="M 9.18,12 H 6.85 l 0.16,3.98 c 0,0 0,0 0,0 h 2 c 0,0 0,0 0,0 z"/>
+  <path fill="context-fill #666" d="m 1.35,0.3 c 0,0.2 0.15,0.37 0.3,0.37 h 0.7 L 2.61,3.3 H 5.83 L 5.7,0 H 1.65 C 1.5,0 1.35,0.15 1.35,0.3 Z"/>
+  <path fill="context-fill #666" d="M 6.15,11.3 6,8 H 3 l 0.29,3.3 z" />
+  <path fill="context-fill #666" d="M 6.18,12 H 3.36 l 0.32,3.7 C 3.7,15.86 3.85,16 4.01,16 h 2.34 z"/>
+  <path fill="context-fill #666" d="M 6.5,3.3 H 9.53 L 9.67,0 H 6.36 Z"/>
+  <path fill="context-fill #666" d="M 5.99,7.3 5.86,4 h -3.2 l 0.29,3.3 z"/>
+  <path fill="context-fill #666" d="M 10,8 9.87,11.3 H 12.72 L 13,8 Z"/>
+  <path fill="context-fill #666" d="m 9.85,12 -0.2,4 h 2.37 c 0.17,0 0.33,-0.14 0.33,-0.3 L 12.67,12 Z"/>
+  <path fill="context-fill #666" d="m 10.17,4 -0.14,3.3 h 3 L 13.35,4 Z"/>
+  <path fill="context-fill #666" d="m 10.2,3.3 h 3.15 l 0.3,-2.63 h 0.7 c 0.18,0 0.3,-0.16 0.3,-0.37 0,-0.15 -0.12,-0.3 -0.3,-0.3 h -4 z"/>
+</svg>

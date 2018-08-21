@@ -1,0 +1,117 @@
+@import url(chrome://os_special/skin/compose.css);
+@import url(chrome://MonterailOverlay/skin/css/root.css);
+@import url(chrome://MonterailOverlay/skin/css/icons/compose.css);
+
+#headers-box>#MsgHeadersToolbar:not(:-moz-lwtheme),
+#FormatToolbox>#FormatToolbar:not(:-moz-lwtheme) {
+    color: var(--message-list-text-color);
+    background-color: var(--background-color-light);
+    -moz-appearance: none;
+}
+
+#compose-toolbox>#compose-toolbar-menubar2:not(:-moz-lwtheme){
+    background-color: var(--background-color) !important;
+    color: #fff !important;
+    -moz-appearance: none;
+    margin-top: -2px;
+    margin-bottom: -2px;
+}
+
+.menubar-text{
+    color: #fff !important;
+}
+
+#msgSubject:hover, #msgSubject[focused="true"], #msgIdentity:hover, #msgIdentity:focus, #msgIdentity[focused="true"], .textbox-addressingWidget[focused="true"], .textbox-addressingWidget:hover {
+    background-color: var(--background-color-light);
+    color: #fff;
+}
+
+#compose-toolbox>#composeToolbar2:not(:-moz-lwtheme){
+    background-color: var(--background-color);
+    color: #fff;
+    -moz-appearance: none;
+}
+
+.toolbarbutton-1 {
+    -moz-context-properties: fill;
+}
+
+.toolbarbutton-1:not(:-moz-lwtheme),
+.toolbarbutton-menubutton-button:not(:-moz-lwtheme) {
+    color: #fff;
+    fill: #fff;
+}
+
+toolbar[brighttext]>.toolbarbutton-1 {
+    fill: #fff;
+}
+
+.toolbarbutton-1:-moz-window-inactive .toolbarbutton-icon,
+.toolbarbutton-1:-moz-window-inactive>.toolbarbutton-text,
+.toolbarbutton-menubutton-button:-moz-window-inactive>.toolbarbutton-icon,
+.toolbarbutton-menubutton-button:-moz-window-inactive>.toolbarbutton-text {
+    opacity: 0.5;
+}
+
+.toolbarbutton-menubutton-button>.toolbarbutton-icon,
+.toolbarbutton-1 .toolbarbutton-icon {
+    width: 16px !important;
+    height: 16px !important;
+    margin: 1px !important;
+}
+
+.emailDisplayButton:hover{
+    background-color: var(--tree-background-color-selected);
+}
+
+#msgHeaderView {
+    color: var(--headers-text-color) !important;
+    background-color: var(--headers-background-color) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25) !important;
+}
+
+.msgHeaderView-button {
+    min-width: 0px !important;
+    border-color: transparent !important;
+    background-color: transparent !important;
+    margin: 0px !important;
+}
+
+.msgHeaderView-button:hover {
+    border-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+.msgHeaderView-button>label {
+    display: none;
+}
+
+#expandedHeader2Rows row {
+    display: block !important;
+}
+
+#expandedHeaderRows row *,
+#expandedHeader2Rows row * {
+    color: var(--headers-text-color) !important;
+}
+
+#expandedsubjectLabel,
+#expandedfromLabel {
+    display: none !important;
+}
+
+#expandedHeader2Rows #expandedreply-toRow {
+    display: none !important;
+}
+
+#expandedsubjectBox .headerValue {
+    font-size: var(--subject-line-font-size) !important;
+}
+
+.emailStar {
+    margin-inline-start: 2px !important;
+}
+
+menuseparator {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}

@@ -1,0 +1,255 @@
+/* :::: Credit where credit is due :::: */
+/* Sharebird: light-weight theme idea */
+
+@import url(chrome://os_special/skin/messenger.css);
+@import url(chrome://MonterailOverlay/skin/css/root.css);
+
+#messengerWindow>#navigation-toolbox:not(:-moz-lwtheme):not(:-moz-window-inactive) {
+    color: #fff !important;
+    background-color: var(--background-color) !important;
+}
+
+#messengerWindow>#navigation-toolbox:not(:-moz-lwtheme):-moz-window-inactive {
+    color: #fff !important;
+    background-color: var(--background-color-inactive) !important;
+}
+
+#menubar-items>#mail-menubar>menu:not(:-moz-lwtheme) {
+    -moz-appearance: none;
+    border-style: none;
+    color: inherit !important;
+}
+
+#menubar-items>#mail-menubar>menu[_moz-menuactive="true"]:not([disabled="true"]):not(:-moz-lwtheme) {
+    background-color: hsla(0, 0%, 0%, .12);
+}
+
+#menubar-items>#mail-menubar>menu[_moz-menuactive="true"][open="true"]:not([disabled="true"]):not(:-moz-lwtheme) {
+    background-color: hsla(0, 0%, 0%, .22);
+}
+
+.mail-toolbox:not(:-moz-lwtheme),
+#mailContent>#mail-toolbox:not(:-moz-lwtheme),
+.contentTabInstance>.contentTabToolbox:not(:-moz-lwtheme) {
+    box-shadow: none;
+    background-image: none;
+    background-color: var(--background-color-light);
+    color: var(--message-list-text-color);
+}
+
+#attachmentView>#attachmentBar {
+    color: var(--message-list-text-color);
+    background-color: #fcfcfc;
+}
+
+.tabmail-tab .tab-background-middle[selected=true] {
+    --fgTabBackgroundColor: #fff;
+    --fgTabTexture: linear-gradient(transparent, transparent);
+}
+
+.tabmail-tab:not([selected]):not(:-moz-lwtheme) {
+    color: inherit !important;
+}
+
+.treecol-icon,
+.tabmail-tab,
+.toolbarbutton-1 {
+    -moz-context-properties: fill;
+}
+
+.toolbarbutton-1:not(:-moz-lwtheme),
+.toolbarbutton-menubutton-button:not(:-moz-lwtheme) {
+    color: var(--message-list-text-color);
+    fill: var(--message-list-text-color);
+}
+
+#navigation-toolbox .toolbarbutton-1:not(:-moz-lwtheme),
+#navigation-toolbox .toolbarbutton-menubutton-button:not(:-moz-lwtheme),
+.tab-label {
+    color: #fff;
+    fill: #fff;
+}
+
+.tabmail-tab[selected]:not(:-moz-lwtheme):-moz-window-inactive .tab-icon-image,
+.tabmail-tab[selected]:not(:-moz-lwtheme):-moz-window-inactive .tab-label-container,
+.toolbarbutton-1:-moz-window-inactive .toolbarbutton-icon,
+.toolbarbutton-1:-moz-window-inactive>.toolbarbutton-text,
+.toolbarbutton-menubutton-button:-moz-window-inactive>.toolbarbutton-icon,
+.toolbarbutton-menubutton-button:-moz-window-inactive>.toolbarbutton-text {
+    opacity: 0.5;
+}
+
+.toolbarbutton-menubutton-button>.toolbarbutton-icon,
+.toolbarbutton-1 .toolbarbutton-icon {
+    width: 16px !important;
+    height: 16px !important;
+    margin: 1px !important;
+    padding: 0 !important;
+}
+
+toolbar>#button-chat[unreadMessages="true"] {
+    fill: var(--tree-background-color-selected);
+}
+
+toolbar[brighttext]>.toolbarbutton-1 {
+    fill: #fff;
+}
+
+#quick-filter-bar {
+    background-color: var(--background-color-light);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) inset;
+}
+
+#singlemessage>#msgHeaderView {
+    background-color: var(--background-color);
+}
+
+/* foldertree & threadtree */
+
+#folderPaneBox>#folderTree {
+    background-color: var(--background-color);
+}
+
+#folderTree>treechildren,
+#threadTree>treechildren {
+    --treechildren-selectedBackground: var(--tree-background-color-selected);
+    --treechildren-selectedFocusBackground: var(--tree-background-color-selected);
+    --treechildren-selectedFocusCurrentBackground: var(--tree-background-color-selected);
+    --treechildren-hoverSelectedBackground: var(--tree-background-color-selected);
+}
+
+#threadTree>treechildren {
+    --treechildren-hoverBackground: var(--tree-background-color-hover);
+    --treechildren-hoverCurrentBackground: var(--tree-background-color-hover);
+    background-color: var(--thread-background-color);
+    color: #fff;
+}
+
+#folderTree>treechildren {
+    --treechildren-hoverBackground: rgba(255,255,255,.1);
+    --treechildren-hoverCurrentBackground: rgba(255,255,255,.1);
+}
+
+#folderPaneBox>#folderTree:-moz-window-inactive {
+    background-color: var(--background-color-inactive);
+}
+
+#threadContentArea>#threadTree {
+    background-color: #fff;
+}
+
+#threadTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected),
+#threadTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus),
+#folderTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text,
+#folderTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus) {
+    color: #fff;
+}
+
+#rssSubscriptionsList>treechildren::-moz-tree-image,
+#folderPaneBox>#folderTree>treechildren::-moz-tree-image {
+    width: 14px;
+    height: 14px;
+}
+
+/*     Folder Tree sizes    */
+
+treechildren:-moz-tree-twisty {
+    width: 12px !important;
+    -moz-image-region: rect(0px 12px 12px 0px) !important;
+    -moz-appearance: none !important;
+    list-style-type: image !important;
+}
+
+#folderTree>hbox {
+    margin-top: 30px !important;
+}
+
+#folderTree>treechildren::-moz-tree-row {
+	margin-top: 0px !important;
+}
+
+#folderTree>treechildren::-moz-tree-row {
+    height: var(--folder-tree-row-height) !important;
+}
+
+#folderTree>treechildren::-moz-tree-row(selected) {
+    border: none !important;
+}
+
+#folderTree>treechildren::-moz-tree-cell-text(folderNameCol, newMessages-true),
+#folderTree>treechildren::-moz-tree-cell-text(folderNameCol, closed, subfoldersHaveUnreadMessages-true) {
+    color: #fff !important;
+    font-style: italic !important;
+}
+
+/*    Thread tree sizes   */
+
+#threadTree>treechildren::-moz-tree-row {
+    height: var(--message-list-row-height) !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(127, 127, 127, 0.2) !important;
+}
+
+#threadTree>treechildren::-moz-tree-row(selected) {
+    border: none !important;
+}
+
+#threadCols {
+    background-color: #8c8c8c;
+}
+
+#threadCols,
+#threadCols treecol,
+#threadCols treecolpicker {
+    -moz-appearance: none !important;
+}
+
+#threadCols treecol[sortDirection="ascending"] .treecol-sortdirection {
+    -moz-appearance: button-arrow-up !important;
+}
+
+#threadCols treecol[sortDirection="descending"] .treecol-sortdirection {
+    -moz-appearance: button-arrow-down !important;
+}
+
+#threadCols treecol,
+#threadCols treecolpicker {
+    color: #fff !important;
+    fill: #fff;
+    border: none !important;
+    padding: 3px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+    border-left: 1px solid rgba(127, 127, 127, 0.4) !important;
+    min-width: 21px !important;
+}
+
+#threadPane {
+    -moz-appearance: none !important;
+}
+
+.toolbarbutton-1.msgHeaderView-button {
+    background-image: linear-gradient(0, var(--background-color-light), var(--background-color-light)) !important;
+}
+
+.headerValue, .dateLabel {
+    color: #fff;
+}
+
+#folderpane_splitter {
+    border-inline-start: 1px solid var(--background-color) !important;
+}
+
+#threadpane-splitter, #folderTree:not(:-moz-lwtheme) {
+    border-bottom: 1px solid var(--background-color) !important;
+}
+
+statusbar {
+    -moz-appearance: none;
+    background-color: var(--background-color) !important;
+    color: #fff;
+}
+
+
