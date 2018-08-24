@@ -29,7 +29,12 @@
   color: inherit;
 }
 
-.tabmail-tab:not([selected]):not(:-moz-lwtheme) > .tab-stack > .tab-content > .tab-label-container {
+.tabmail-tab > .tab-stack > .tab-content[selected=true] > .tab-text {
+  color: #fff !important;
+}
+
+.tabmail-tab:not([selected]):not(:-moz-lwtheme) > .tab-stack > .tab-content > .tab-label-container,
+.tabmail-tab > .tab-stack > .tab-content:not([selected=true]) > .tab-text {
   color: inherit;
 }
 
