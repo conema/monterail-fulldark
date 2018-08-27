@@ -34,17 +34,14 @@
 
 #folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
   background-color: var(--tree-background-color-selected);
-  opacity: 0.7 !important;
 }
 
 #folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, focus) {
   background-color: var(--tree-background-color-selected);
-  opacity: 0.7 !important;
 }
 
 #folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(current, focus) {
   background-color: var(--tree-background-color-selected);
-  opacity: 0.7 !important;
   border-color: transparent;
 }
 
@@ -58,7 +55,6 @@
 
 #folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, selected) {
   background-color: var(--tree-background-color-selected);
-  opacity: 0.7 !important;
 }
 
 #folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text,
@@ -71,25 +67,21 @@
 }
 
 #threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
-  border-color: var(--tree-background-color-selected);
-  opacity: 0.7 !important;
+  background-color: var(--tree-background-color-selected);
 }
 
 #threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, focus) {
-  border-color: var(--tree-background-color-selected);
-  opacity: 0.7 !important;
+  background-color: var(--tree-background-color-selected);
 }
 
 #threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(current, focus) {
   background-color: transparent;
   border-color: var(--tree-background-color-selected);
-  opacity: 0.7 !important;
   border-style: solid;
 }
 
 #threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(current, selected, focus) {
-  border-color: var(--tree-background-color-selected);
-  opacity: 0.1 !important;
+  background-color: var(--tree-background-color-selected);
   border-color: transparent;
 }
 
@@ -108,4 +100,8 @@
 #threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected),
 #folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus) {
   color: #fff;
+}
+
+#threadTree > treechildren::-moz-tree-row, #threadTree {
+  background-color: var(--thread-background-color);
 }

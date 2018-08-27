@@ -110,9 +110,13 @@ toolbar[brighttext]>.toolbarbutton-1 {
     background-color: var(--background-color);
 }
 
+#folderPaneBox>#folderTree:-moz-window-inactive {
+    background-color: var(--background-color-inactive);
+}
+
 #folderTree>treechildren,
 #threadTree>treechildren {
-    --treechildren-selectedBackground: var(--tree-background-color-selected);
+    --treechildren-selectedBackground: var(--tree-background-color-selected) !important;
     --treechildren-selectedFocusBackground: var(--tree-background-color-selected);
     --treechildren-selectedFocusCurrentBackground: var(--tree-background-color-selected);
     --treechildren-hoverSelectedBackground: var(--tree-background-color-selected);
@@ -121,7 +125,6 @@ toolbar[brighttext]>.toolbarbutton-1 {
 #threadTree>treechildren {
     --treechildren-hoverBackground: var(--tree-background-color-hover);
     --treechildren-hoverCurrentBackground: var(--tree-background-color-hover);
-    background-color: var(--thread-background-color);
     color: #fff;
 }
 
@@ -130,12 +133,8 @@ toolbar[brighttext]>.toolbarbutton-1 {
     --treechildren-hoverCurrentBackground: rgba(255,255,255,.1);
 }
 
-#folderPaneBox>#folderTree:-moz-window-inactive {
-    background-color: var(--background-color-inactive);
-}
-
 #threadContentArea>#threadTree {
-    background-color: #fff;
+    background-color: var(--thread-background-color);
 }
 
 #threadTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected),
@@ -251,5 +250,3 @@ statusbar {
     background-color: var(--background-color) !important;
     color: #fff;
 }
-
-
