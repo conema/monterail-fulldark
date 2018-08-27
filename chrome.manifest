@@ -8,12 +8,12 @@ style	chrome://calendar/content/calendar-event-dialog.xul			chrome://MonterailOv
 
 #register theme
 skin	MonterailOverlay	classic/1.0	chrome/MonterailOverlay/classic/
-skin	MonterailOverlay	Monterail	chrome/MonterailOverlay/
-skin	app_version		Monterail	chrome/MonterailOverlay/52/
-skin	app_version		Monterail	chrome/MonterailOverlay/60/	appversion>=60a1
-skin	os_special		Monterail	chrome/MonterailOverlay/linux/
-skin	os_special		Monterail	chrome/MonterailOverlay/mac/	os=Darwin
-skin	os_special		Monterail	chrome/MonterailOverlay/win/	os=WINNT
+skin	MonterailOverlay	MonterailFullDark	chrome/MonterailOverlay/
+skin	app_version		MonterailFullDark	chrome/MonterailOverlay/52/
+skin	app_version		MonterailFullDark	chrome/MonterailOverlay/60/	appversion>=60a1
+skin	os_special		MonterailFullDark	chrome/MonterailOverlay/linux/
+skin	os_special		MonterailFullDark	chrome/MonterailOverlay/mac/	os=Darwin
+skin	os_special		MonterailFullDark	chrome/MonterailOverlay/win/	os=WINNT
 
 #overrides
 override chrome://messenger/skin/icons/caption-buttons.svg#minimize	chrome://MonterailOverlay/skin/icons/caption-buttons.svg#minimize	appversion<=55.0a1
