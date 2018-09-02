@@ -24,8 +24,8 @@ This seems a know issue of Thunderbird 60 [[1]](https://bugzilla.mozilla.org/sho
     - Windows: `C:\Users\[your windows user]\AppData\Roaming\Thunderbird\Profiles\[(literally) random letters and numbers].default/`
     - Linux: `/home/[your linux user]/.thunderbird/[(literally) random letters and numbers].default/`
     - MacOS: `/home/[your macos user]/Library/Thunderbird/Profiles/[(literally) random letters and numbers].default/`
-  2. Go to the "extensions" folder, here there should be a file named "MonterailFullDark@conema.me"
-  3. **While the Thunderbird is opened** in background, delete the "MonterailFullDark@conema.me" file.
+  2. Go to the "extensions" folder, here there should be a file named "MonterailFullDark@conema.me.xpi"
+  3. **While the Thunderbird is opened** in background, delete the "MonterailFullDark@conema.me.xpi" file.
   4. Restart Thunderbird and reinstall the theme
   5. Restart Thunderbird again, the theme now should work
 
