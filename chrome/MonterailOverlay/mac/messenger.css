@@ -105,3 +105,59 @@
 #threadTree > treechildren::-moz-tree-row, #threadTree {
   background-color: var(--thread-background-color);
 }
+
+/* Calendar */
+#previous-day-button > .toolbarbutton-icon,
+#next-day-button > .toolbarbutton-icon {
+  -moz-appearance: none;
+}
+
+#previous-day-button, #next-day-button {
+  list-style-image: url("nav-arrow-white.svg") !important;
+}
+
+#previous-day-button {
+  transform: rotate(-180deg);
+}
+
+.miniday-nav-buttons {
+  -moz-appearance: none !important;
+}
+
+.miniday-nav-buttons:hover {
+  background: rgba(255,255,255,.1);
+}
+
+#agenda-toolbar toolbarbutton{
+  -moz-appearance: none !important;
+  padding: 7px;
+  border-radius: 3px;
+}
+
+.today-pane-cycler {
+  -moz-appearance: none;
+  margin-right: 5px;
+}
+
+#agenda-toolbar toolbarbutton:hover, .today-pane-cycler:hover {
+  background: rgba(255,255,255,.1);
+}
+
+#calendar-task-tree-detail treecol, #calendar-task-tree-detail treecolpicker{
+  -moz-appearance: none !important;
+  background-color: #fff;
+  height: 25px;
+}
+
+#calendar-task-tree-detail treecol[sortDirection="ascending"] .treecol-sortdirection {
+  -moz-appearance: button-arrow-up !important;
+}
+
+#calendar-task-tree-detail treecol[sortDirection="descending"] .treecol-sortdirection {
+  -moz-appearance: button-arrow-down !important;
+}
+
+#calendar-task-tree-detail treechildren::-moz-tree-row,
+#calendar-list-tree-widget treechildren::-moz-tree-row{
+  height: 25px;
+}
