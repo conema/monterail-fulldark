@@ -76,3 +76,34 @@ statusbar{
 #threadCols treecol {
     background-color: #8c8c8c !important;
 }
+
+/* Calendar */
+.miniday-nav-buttons {
+    list-style-image: url("nav-arrow-white.svg");
+}
+
+#today-button {
+    list-style-image: url("nav-today-white.svg");
+}
+
+#todaypane-new-event-button {
+    list-style-image: url("addAsEvent-white.svg") !important;
+}
+
+.today-pane-cycler {
+    list-style-image: url("chrome://calendar-common/skin/today-pane-cycler.svg#inverted");
+}
+
+.today-closebutton {
+    list-style-image: url(chrome://messenger/skin/icons/caption-buttons.svg#close-white);
+    -moz-image-region: rect(0px, 16px, 12px, -4px) !important;
+}
+
+.today-closebutton:hover {
+    list-style-image: url("chrome://global/skin/icons/close.png");
+    -moz-image-region: rect(0, 40px, 20px, 20px) !important;
+}
+
+sidebarheader {
+    border-top: none;
+}

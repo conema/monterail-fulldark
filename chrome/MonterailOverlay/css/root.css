@@ -252,6 +252,12 @@ calendar-list-tree > tree {
     --treechildren-selectedFocusBackground: var(--tree-background-color-selected);
     --treechildren-selectedFocusCurrentBackground: var(--tree-background-color-selected);
     --treechildren-hoverSelectedBackground: var(--tree-background-color-selected);
+    --treechildren-selectedColor: #000;
+    --treechildren-focusColor: var(--tree-background-color-selected);
+    --treechildren-selectedImage: linear-gradient(var(--tree-background-color-selected), var(--tree-background-color-selected));
+    --treechildren-selectedFocusCurrentImage: linear-gradient(var(--tree-background-color-selected), var(--tree-background-color-selected));
+    --treechildren-hoverSelectedImage: linear-gradient(var(--tree-background-color-selected), var(--tree-background-color-selected));
+    --treechildren-hoverImage: linear-gradient(var(--tree-background-color-hover), var(--tree-background-color-hover));
 }
 
 #calendar-task-tree-detail treechildren::-moz-tree-row(selected) {
