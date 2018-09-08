@@ -193,7 +193,7 @@ sidebarheader > label {
 
 /* Lightning */
 
-#ltnSidebar {
+#ltnSidebar, #unifinder-todo-tree > .calendar-task-tree {
     background-color: var(--background-color);
 }
 
@@ -201,7 +201,7 @@ minimonth {
     background: var(--background-color-light);
 }
 
-treenode-checkbox {
+treenode-checkbox, #task-filtertree-pane, .checkbox-label {
     color: #fff;
 }
 
@@ -209,17 +209,9 @@ calendar-list-tree > tree {
     background: transparent;
 }
 
-.checkbox-label {
-    color: #ffff;
-}
-
 #unifinder-searchBox {
     background-color: var(--background-color-light);
     color: var(--search-text-color);
-}
-
-#unifinder-todo-tree > .calendar-task-tree {
-    background: var(--background-color);
 }
 
 #calendar-task-tree-detail treechildren::-moz-tree-cell-text(selected),
