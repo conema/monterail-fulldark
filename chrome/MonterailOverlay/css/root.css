@@ -90,8 +90,6 @@ menucaption[disabled="true"] label,
     color: grey !important;
 }
 
-
-
 /*    Scrollbar    */
 
 scrollbar {
@@ -134,15 +132,18 @@ thumb:hover {
     color: var(--search-text-color);
 }
 
-
 /* Calendar */
 .miniday-nav-buttons {
     fill: #fff !important;
     -moz-context-properties: fill, fill-opacity;
 }
 
-#today-pane-panel {
+#today-pane-panel, #mini-day-box, #agenda-toolbar, #todo-tab-panel, #mini-day-box stack, #miniday-dropdown-button, #mini-day-box > stack > hbox > vbox {
     background-color: var(--background-color);
+}
+
+#agenda-toolbar:-moz-window-inactive, #todo-tab-panel:-moz-window-inactive, #mini-day-box:-moz-window-inactive, #mini-day-box stack:-moz-window-inactive, #today-pane-splitter:-moz-window-inactive {
+    background-color: var(--background-color) !important;
 }
 
 .today-subpane {
@@ -235,7 +236,9 @@ calendar-list-tree > tree {
 }
 
 #calendar-task-tree-detail treechildren::-moz-tree-row(odd),
-#calendar-list-tree-widget treechildren::-moz-tree-row(odd) {
+#calendar-list-tree-widget treechildren::-moz-tree-row(odd),
+#calendar-task-tree-detail treechildren::-moz-tree-row(even),
+#calendar-list-tree-widget treechildren::-moz-tree-row(even) {
   background: var(--background-color);
 }
 
