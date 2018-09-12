@@ -141,7 +141,7 @@ thumb:hover {
     -moz-context-properties: fill, fill-opacity;
 }
 
-#today-pane-panel {
+#today-pane-panel, #mini-day-box, #mini-day-box hbox, #agenda-toolbar {
     background-color: var(--background-color);
 }
 
@@ -235,7 +235,9 @@ calendar-list-tree > tree {
 }
 
 #calendar-task-tree-detail treechildren::-moz-tree-row(odd),
-#calendar-list-tree-widget treechildren::-moz-tree-row(odd) {
+#calendar-list-tree-widget treechildren::-moz-tree-row(odd),
+#calendar-task-tree-detail treechildren::-moz-tree-row(even),
+#calendar-list-tree-widget treechildren::-moz-tree-row(even) {
   background: var(--background-color);
 }
 
