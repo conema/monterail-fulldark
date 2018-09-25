@@ -126,7 +126,7 @@ toolbar[brighttext]>.toolbarbutton-1 {
 
 #folderTree>treechildren,
 #threadTree>treechildren,
-.calendar-task-tree>treechildren,
+#calendar-task-tree treechildren,
 #unifinder-search-results-tree>treechildren {
     --treechildren-selectedBackground: var(--tree-background-color-selected) !important;
     --treechildren-selectedFocusBackground: var(--tree-background-color-selected);
@@ -135,7 +135,7 @@ toolbar[brighttext]>.toolbarbutton-1 {
 }
 
 #threadTree>treechildren, 
-.calendar-task-tree>treechildren,
+#calendar-task-tree treechildren,
 #unifinder-search-results-tree>treechildren {
     --treechildren-hoverBackground: var(--tree-background-color-hover);
     --treechildren-hoverCurrentBackground: var(--tree-background-color-hover);
@@ -148,7 +148,7 @@ toolbar[brighttext]>.toolbarbutton-1 {
 }
 
 #threadContentArea>#threadTree, 
-.calendar-task-tree>treechildren,
+#calendar-task-tree treechildren,
 #unifinder-search-results-tree>treechildren {
     background-color: var(--thread-background-color);
 }
@@ -157,8 +157,8 @@ toolbar[brighttext]>.toolbarbutton-1 {
 #threadTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus),
 #folderTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text,
 #folderTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus),
-.calendar-task-tree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text,
-.calendar-task-tree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus),
+#calendar-task-tree treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text,
+#calendar-task-tree treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus),
 #unifinder-search-results-tree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text,
 #unifinder-search-results-tree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus) {
     color: #fff;
@@ -216,8 +216,8 @@ treechildren:-moz-tree-twisty {
 #threadCols,
 #threadCols treecol,
 #threadCols treecolpicker,
-.calendar-task-tree treecol,
-.calendar-task-tree treecolpicker,
+#calendar-task-tree treecol,
+#calendar-task-tree treecolpicker,
 #unifinder-search-results-tree treecol,
 #unifinder-search-results-tree treecolpicker {
     -moz-appearance: none !important;
@@ -233,8 +233,8 @@ treechildren:-moz-tree-twisty {
 
 #threadCols treecol,
 #threadCols treecolpicker,
-.calendar-task-tree treecol,
-.calendar-task-tree treecolpicker,
+#calendar-task-tree treecol,
+#calendar-task-tree treecolpicker,
 #unifinder-search-results-tree treecol,
 #unifinder-search-results-tree treecolpicker {
     color: #fff !important;
@@ -243,6 +243,10 @@ treechildren:-moz-tree-twisty {
     padding: 3px !important;
     border-left: 1px solid rgba(127, 127, 127, 0.4) !important;
     min-width: 21px !important;
+}
+
+#threadCols treecol, #calendar-task-tree treecol,  #unifinder-search-results-tree treecol {
+    background-color: var(--background-color-light) !important;
 }
 
 #threadPane {
