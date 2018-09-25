@@ -30,9 +30,7 @@
   --treechildren-hoverSelectedImage: linear-gradient(var(--tree-background-color-selected), var(--tree-background-color-selected));
 }
 
-#threadTree > treechildren, 
-#calendar-task-tree treechildren, 
-#unifinder-search-results-tree > treechildren {
+#threadTree > treechildren {
   --treechildren-outline: none;
   --treechildren-selectedColor: transparent;
   --treechildren-2ndBorderColor: transparent;
