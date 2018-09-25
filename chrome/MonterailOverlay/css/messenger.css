@@ -30,11 +30,21 @@
 
 .mail-toolbox:not(:-moz-lwtheme),
 #mailContent>#mail-toolbox:not(:-moz-lwtheme),
-.contentTabInstance>.contentTabToolbox:not(:-moz-lwtheme) {
+.contentTabInstance>.contentTabToolbox:not(:-moz-lwtheme),
+#folderpane-mode-selector-menulist,
+#threadCols {
     box-shadow: none;
     background-image: none;
     background-color: var(--background-color-light);
     color: var(--message-list-text-color);
+}
+
+#calendar-add-task-button {
+    color: var(--message-list-text-color);
+}
+
+#folderpane-mode-selector-menulist {
+    border: 0;
 }
 
 #attachmentView>#attachmentBar {
@@ -191,10 +201,6 @@ treechildren:-moz-tree-twisty {
 
 #threadTree>treechildren::-moz-tree-row(selected) {
     border: none !important;
-}
-
-#threadCols {
-    background-color: #8c8c8c;
 }
 
 #threadCols,

@@ -150,6 +150,10 @@ thumb:hover {
     color: #fff;
 }
 
+#today-pane-panel > sidebarheader {
+    border-bottom: 0;
+}
+
 #todaypane-new-event-button {
     color: #fff;
     fill: #fff;
@@ -198,7 +202,7 @@ sidebarheader > label {
     background-color: var(--background-color);
 }
 
-minimonth {
+minimonth, #task-addition-box {
     background: var(--background-color-light);
 }
 
