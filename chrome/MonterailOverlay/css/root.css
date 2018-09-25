@@ -127,7 +127,7 @@ thumb:hover {
 }
 
 /* Search Box */
-.searchBox {
+.searchBox, #view-task-edit-field {
     background-color: var(--search-background-color);
     color: var(--search-text-color);
 }
@@ -295,4 +295,20 @@ calendar-list-tree > tree {
 #calendar-task-tree-detail treechildren::-moz-tree-row(hover, selected) {
     border-color: var(--tree-background-color-selected);
     background-color: var(--tree-background-color-selected);
+}
+
+#calendar-task-details-container {
+    background: var(--background-color);
+    border: 0;
+}
+
+#calendar-task-details, #task-actions-toolbar {
+    background: var(--background-color);
+    color: #fff;
+    fill: #fff;
+}
+
+#calendar-task-details row label {
+    color: #fff;
+    fill: #fff;
 }

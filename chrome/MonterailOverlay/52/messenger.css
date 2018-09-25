@@ -73,8 +73,8 @@ statusbar{
     color: #fff;
 }
 
-#threadCols treecol {
-    background-color: #8c8c8c !important;
+#threadCols treecol, .calendar-task-tree treecol,  #unifinder-search-results-tree treecol {
+    background-color: var(--background-color-light) !important;
 }
 
 /* Calendar */
