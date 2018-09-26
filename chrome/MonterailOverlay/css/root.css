@@ -127,7 +127,7 @@ thumb:hover {
 }
 
 /* Search Box */
-.searchBox, #view-task-edit-field {
+.searchBox, #view-task-edit-field, #unifinder-task-edit-field {
     background-color: var(--search-background-color);
     color: var(--search-text-color);
 }

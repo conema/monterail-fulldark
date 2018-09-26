@@ -223,7 +223,9 @@ treechildren:-moz-tree-twisty {
 #calendar-task-tree treecol,
 #calendar-task-tree treecolpicker,
 #unifinder-search-results-tree treecol,
-#unifinder-search-results-tree treecolpicker {
+#unifinder-search-results-tree treecolpicker,
+#unifinder-todo-tree treecol,
+#unifinder-todo-tree treecolpicker {
     -moz-appearance: none !important;
 }
 
@@ -240,7 +242,9 @@ treechildren:-moz-tree-twisty {
 #calendar-task-tree treecol,
 #calendar-task-tree treecolpicker,
 #unifinder-search-results-tree treecol,
-#unifinder-search-results-tree treecolpicker {
+#unifinder-search-results-tree treecolpicker,
+#unifinder-todo-tree treecol,
+#unifinder-todo-tree treecolpicker {
     color: #fff !important;
     fill: #fff;
     border: none !important;
@@ -249,7 +253,13 @@ treechildren:-moz-tree-twisty {
     min-width: 21px !important;
 }
 
-#threadCols treecol, #calendar-task-tree treecol, #calendar-task-tree treecolpicker,  #unifinder-search-results-tree treecol, #unifinder-search-results-tree treecolpicker {
+#threadCols treecol, 
+#calendar-task-tree treecol, 
+#calendar-task-tree treecolpicker,  
+#unifinder-search-results-tree treecol, 
+#unifinder-search-results-tree treecolpicker,
+#unifinder-todo-tree treecol,
+#unifinder-todo-tree treecolpicker {
     background-color: var(--background-color-light) !important;
 }
 
