@@ -73,10 +73,6 @@ statusbar{
     color: #fff;
 }
 
-#threadCols treecol {
-    background-color: #8c8c8c !important;
-}
-
 /* Calendar */
 .miniday-nav-buttons {
     list-style-image: url("nav-arrow-white.svg");

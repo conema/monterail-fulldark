@@ -30,11 +30,21 @@
 
 .mail-toolbox:not(:-moz-lwtheme),
 #mailContent>#mail-toolbox:not(:-moz-lwtheme),
-.contentTabInstance>.contentTabToolbox:not(:-moz-lwtheme) {
+.contentTabInstance>.contentTabToolbox:not(:-moz-lwtheme),
+#folderpane-mode-selector-menulist,
+#threadCols {
     box-shadow: none;
     background-image: none;
     background-color: var(--background-color-light);
     color: var(--message-list-text-color);
+}
+
+#calendar-add-task-button {
+    color: var(--message-list-text-color);
+}
+
+#folderpane-mode-selector-menulist {
+    border: 0;
 }
 
 #attachmentView>#attachmentBar {
@@ -115,14 +125,18 @@ toolbar[brighttext]>.toolbarbutton-1 {
 }
 
 #folderTree>treechildren,
-#threadTree>treechildren {
+#threadTree>treechildren,
+#calendar-task-tree treechildren,
+#unifinder-search-results-tree>treechildren {
     --treechildren-selectedBackground: var(--tree-background-color-selected) !important;
     --treechildren-selectedFocusBackground: var(--tree-background-color-selected);
     --treechildren-selectedFocusCurrentBackground: var(--tree-background-color-selected);
     --treechildren-hoverSelectedBackground: var(--tree-background-color-selected);
 }
 
-#threadTree>treechildren {
+#threadTree>treechildren, 
+#calendar-task-tree treechildren,
+#unifinder-search-results-tree>treechildren {
     --treechildren-hoverBackground: var(--tree-background-color-hover);
     --treechildren-hoverCurrentBackground: var(--tree-background-color-hover);
     color: #fff;
@@ -133,14 +147,24 @@ toolbar[brighttext]>.toolbarbutton-1 {
     --treechildren-hoverCurrentBackground: rgba(255,255,255,.1);
 }
 
-#threadContentArea>#threadTree {
+#threadContentArea>#threadTree, 
+#calendar-task-tree treechildren,
+#calendar-task-tree treechildren::-moz-tree-row(even),
+#calendar-task-tree treechildren::-moz-tree-row(odd),
+#unifinder-search-results-tree>treechildren,
+#unifinder-search-results-tree>treechildren::-moz-tree-row(even),
+#unifinder-search-results-tree>treechildren::-moz-tree-row(odd) {
     background-color: var(--thread-background-color);
 }
 
 #threadTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected),
 #threadTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus),
 #folderTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text,
-#folderTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus) {
+#folderTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus),
+#calendar-task-tree treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text,
+#calendar-task-tree treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus),
+#unifinder-search-results-tree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text,
+#unifinder-search-results-tree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus) {
     color: #fff;
 }
 
@@ -193,13 +217,15 @@ treechildren:-moz-tree-twisty {
     border: none !important;
 }
 
-#threadCols {
-    background-color: #8c8c8c;
-}
-
 #threadCols,
 #threadCols treecol,
-#threadCols treecolpicker {
+#threadCols treecolpicker,
+#calendar-task-tree treecol,
+#calendar-task-tree treecolpicker,
+#unifinder-search-results-tree treecol,
+#unifinder-search-results-tree treecolpicker,
+#unifinder-todo-tree treecol,
+#unifinder-todo-tree treecolpicker {
     -moz-appearance: none !important;
 }
 
@@ -212,17 +238,29 @@ treechildren:-moz-tree-twisty {
 }
 
 #threadCols treecol,
-#threadCols treecolpicker {
+#threadCols treecolpicker,
+#calendar-task-tree treecol,
+#calendar-task-tree treecolpicker,
+#unifinder-search-results-tree treecol,
+#unifinder-search-results-tree treecolpicker,
+#unifinder-todo-tree treecol,
+#unifinder-todo-tree treecolpicker {
     color: #fff !important;
     fill: #fff;
     border: none !important;
     padding: 3px !important;
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-    margin-top: 3px !important;
-    margin-bottom: 3px !important;
     border-left: 1px solid rgba(127, 127, 127, 0.4) !important;
     min-width: 21px !important;
+}
+
+#threadCols treecol, 
+#calendar-task-tree treecol, 
+#calendar-task-tree treecolpicker,  
+#unifinder-search-results-tree treecol, 
+#unifinder-search-results-tree treecolpicker,
+#unifinder-todo-tree treecol,
+#unifinder-todo-tree treecolpicker {
+    background-color: var(--background-color-light) !important;
 }
 
 #threadPane {
@@ -249,4 +287,201 @@ statusbar {
     -moz-appearance: none;
     background-color: var(--background-color) !important;
     color: #fff;
+}
+
+/* Calendar */
+.miniday-nav-buttons {
+    fill: #fff !important;
+    -moz-context-properties: fill, fill-opacity;
+}
+
+#today-pane-panel, #mini-day-box, #agenda-toolbar, #todo-tab-panel, #mini-day-box stack, #miniday-dropdown-button, #mini-day-box > stack > hbox > vbox {
+    background-color: var(--background-color);
+}
+
+#agenda-toolbar:-moz-window-inactive, #todo-tab-panel:-moz-window-inactive, #mini-day-box:-moz-window-inactive, #mini-day-box stack:-moz-window-inactive, #today-pane-splitter:-moz-window-inactive {
+    background-color: var(--background-color) !important;
+}
+
+.today-subpane {
+    color: #fff;
+}
+
+#today-pane-panel > sidebarheader {
+    border-bottom: 0;
+}
+
+#todaypane-new-event-button {
+    color: #fff;
+    fill: #fff;
+    -moz-context-properties: fill, fill-opacity;
+}
+
+#agenda-listbox {
+    background-color: var(--background-color);
+    color: #fff;
+}
+
+#today-pane-panel > sidebarheader {
+    background: var(--background-color-light);
+}
+
+.agenda-container-box[selected="true"],
+.agenda-allday-container-box[selected="true"],
+.agenda-checkbox[selected="true"],
+.agenda-container-box[selected="true"][current="true"],
+.agenda-allday-container-box[selected="true"][current="true"],
+.agenda-checkbox[selected="true"][current="true"] {
+    background-color: var(--tree-background-color-selected);
+    color: #fff;
+}
+
+.agenda-container-box[current="true"],
+.agenda-alldaycontainer-box[current="true"],
+.agenda-checkbox[current="true"],
+.agenda-container-box[selected="true"][current="true"][disabled="true"],
+.agenda-allday-container-box[selected="true"][current="true"][disabled="true"],
+.agenda-checkbox[selected="true"][current="true"][disabled="true"] {
+    color: #000;
+}
+
+sidebarheader > label {
+    color: #fff;
+}
+
+.today-pane-cycler {
+    fill: white;
+}
+
+/* Lightning */
+
+#ltnSidebar, #unifinder-todo-tree > .calendar-task-tree {
+    background-color: var(--background-color);
+}
+
+minimonth, #task-addition-box {
+    background: var(--background-color-light);
+}
+
+treenode-checkbox, #task-filtertree-pane, .checkbox-label,#task-filter-pane radio:hover {
+    color: #fff;
+}
+
+calendar-list-tree > tree {
+    background: transparent;
+}
+
+#unifinder-searchBox {
+    background-color: var(--background-color-light);
+    color: var(--search-text-color);
+}
+
+#calendar-task-tree-detail treechildren::-moz-tree-cell-text(selected),
+#calendar-task-tree-detail treechildren::-moz-tree-cell-text(selected, focus),
+#calendar-task-tree-detail treechildren::-moz-tree-cell-text,
+#calendar-task-tree-detail treechildren::-moz-tree-cell-text(selected, focus),
+#calendar-task-tree-detail treechildren::-moz-tree-cell-text(hover, selected),
+#calendar-task-tree-detail treechildren::-moz-tree-cell-text(hover, current),
+#calendar-list-tree-widget treechildren::-moz-tree-cell-text(selected),
+#calendar-list-tree-widget treechildren::-moz-tree-cell-text(selected, focus),
+#calendar-list-tree-widget treechildren::-moz-tree-cell-text,
+#calendar-list-tree-widget treechildren::-moz-tree-cell-text(selected, focus),
+#calendar-list-tree-widget treechildren::-moz-tree-cell-text(hover, selected),
+#calendar-list-tree-widget treechildren::-moz-tree-cell-text(hover, current) {
+    color: var(--message-list-text-color);
+}
+
+#calendar-task-tree-detail treechildren::-moz-tree-cell-text(hover),
+#calendar-list-tree-widget treechildren::-moz-tree-cell-text(hover) {
+    color: var(--message-list-text-color);
+}
+
+#calendar-task-tree-detail treechildren::-moz-tree-row(odd),
+#calendar-list-tree-widget treechildren::-moz-tree-row(odd),
+#calendar-task-tree-detail treechildren::-moz-tree-row(even),
+#calendar-list-tree-widget treechildren::-moz-tree-row(even) {
+  background: var(--background-color);
+}
+
+#calendar-task-tree-detail treechildren,
+#calendar-list-tree-widget treechildren,
+#calendar-task-tree treechildren, 
+#unifinder-search-results-tree > treechildren  {
+    color: var(--thread-background-color) !important;
+    --treechildren-currentColor: var(--tree-background-color-selected);
+    --treechildren-hoverBackground: var(--tree-background-color-hover);
+    --treechildren-hoverCurrentBackground: var(--tree-background-color-hover);
+    --treechildren-selectedBackground: var(--tree-background-color-selected);
+    --treechildren-selectedFocusBackground: var(--tree-background-color-selected);
+    --treechildren-selectedFocusCurrentBackground: var(--tree-background-color-selected);
+    --treechildren-hoverSelectedBackground: var(--tree-background-color-selected);
+    --treechildren-selectedColor: #000;
+    --treechildren-focusColor: var(--tree-background-color-selected);
+    --treechildren-selectedImage: linear-gradient(var(--tree-background-color-selected), var(--tree-background-color-selected));
+    --treechildren-selectedFocusCurrentImage: linear-gradient(var(--tree-background-color-selected), var(--tree-background-color-selected));
+    --treechildren-hoverSelectedImage: linear-gradient(var(--tree-background-color-selected), var(--tree-background-color-selected));
+    --treechildren-hoverImage: linear-gradient(var(--tree-background-color-hover), var(--tree-background-color-hover));
+}
+
+#calendar-task-tree-detail treechildren::-moz-tree-row(selected),
+#calendar-list-tree-widget treechildren::-moz-tree-row(selected),
+#calendar-task-tree treechildren::-moz-tree-row(selected),
+#unifinder-search-results-tree treechildren::-moz-tree-row(selected) {
+    border-color: var(--tree-background-color-selected);
+    background-color: var(--tree-background-color-selected);
+}
+
+#calendar-task-tree-detail treechildren::-moz-tree-row(selected, focus),
+#calendar-task-tree-detail treechildren::-moz-tree-row(dropOn) {
+    border-color: var(--tree-background-color-selected);
+    background-color: var(--tree-background-color-selected);
+}
+
+#calendar-task-tree-detail treechildren::-moz-tree-row(selected, current, focus) {
+    border-color: var(--tree-background-color-selected);
+    background-color: var(--tree-background-color-selected);
+}
+
+#calendar-task-tree-detail treechildren::-moz-tree-row(hover),
+#calendar-list-tree-widget treechildren::-moz-tree-row(hover),
+#calendar-task-tree treechildren::-moz-tree-row(hover),
+#unifinder-search-results-tree treechildren::-moz-tree-row(hover) {
+    border-color: var(--tree-background-color-hover);
+    background-color: var(--tree-background-color-hover);
+}
+
+#calendar-task-tree-detail treechildren::-moz-tree-row(hover, current),
+#calendar-list-tree-widget treechildren::-moz-tree-row(hover, current),
+#calendar-task-tree treechildren::-moz-tree-row(hover, current),
+#unifinder-search-results-tree treechildren::-moz-tree-row(hover, current)  {
+    border-color: var(--tree-background-color-selected);
+    background-image: var(--tree-background-color-selected);
+}
+
+#calendar-task-tree-detail treechildren::-moz-tree-row(hover, selected),
+#calendar-list-tree-widget treechildren::-moz-tree-row(hover, selected),
+#calendar-task-tree treechildren::-moz-tree-row(hover, selected),
+#unifinder-search-results-tree treechildren::-moz-tree-row(hover, selected)  {
+    border-color: var(--tree-background-color-selected);
+    background-color: var(--tree-background-color-selected);
+}
+
+#calendar-task-details-container {
+    background: var(--background-color);
+    border: 0;
+}
+
+#calendar-task-details, #task-actions-toolbar {
+    background: var(--background-color);
+    color: #fff;
+    fill: #fff;
+}
+
+#calendar-task-details row label {
+    color: #fff;
+    fill: #fff;
+}
+
+#calMinimonthBox {
+    margin-top: 0px;
 }

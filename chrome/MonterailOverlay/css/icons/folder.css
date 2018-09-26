@@ -247,6 +247,10 @@ specialFolder-Inbox, newMessages-true) {
     list-style-image: url("chrome:../../icons/addAsTask.svg") !important;
 }
 
+#calendar-add-task-button {
+    fill: #fff;
+}
+
 #calendar-edit-button,
 #task-edit-button {
     list-style-image: url("chrome:../../icons/newmsg.svg") !important;

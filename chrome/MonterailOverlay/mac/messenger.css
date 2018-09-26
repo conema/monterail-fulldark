@@ -32,26 +32,21 @@
   -moz-appearance: none;
 }
 
-#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
-  background-color: var(--tree-background-color-selected);
-}
-
-#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, focus) {
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected),
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, focus),
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(current, focus) {
   background-color: var(--tree-background-color-selected);
 }
 
 #folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(current, focus) {
-  background-color: var(--tree-background-color-selected);
   border-color: transparent;
 }
 
-#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
-  background-color: rgba(255,255,255,.1);
-}
-
+#folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover),
 #folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, current) {
   background-color: rgba(255,255,255,.1);
 }
+
 
 #folderTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, selected) {
   background-color: var(--tree-background-color-selected);
@@ -66,10 +61,7 @@
   border: 1px solid transparent;
 }
 
-#threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
-  background-color: var(--tree-background-color-selected);
-}
-
+#threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected),
 #threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, focus) {
   background-color: var(--tree-background-color-selected);
 }
@@ -85,10 +77,7 @@
   border-color: transparent;
 }
 
-#threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
-  background-color: var(--tree-background-color-hover);
-}
-
+#threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover),
 #threadTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, current) {
   background-color: var(--tree-background-color-hover);
 }
