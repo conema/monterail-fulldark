@@ -2,7 +2,7 @@
   <Description about="urn:mozilla:install-manifest">
     <em:id>MonterailFullDark@conema.me</em:id>
     <em:name>Monterail Full Dark</em:name>
-    <em:version>1.1.1</em:version>
+    <em:version>1.1.2</em:version>
     <em:description>Monterail Full Dark, a Thunderbird theme inspired by the mockup of Monterail</em:description>
     <em:creator>Emanuele Concas</em:creator>
     <em:internalName>MonterailFullDark</em:internalName>
