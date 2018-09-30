@@ -32,7 +32,8 @@
 #mailContent>#mail-toolbox:not(:-moz-lwtheme),
 .contentTabInstance>.contentTabToolbox:not(:-moz-lwtheme),
 #folderpane-mode-selector-menulist,
-#threadCols {
+#threadCols,
+.contentTabToolbox {
     box-shadow: none;
     background-image: none;
     background-color: var(--background-color-light);
