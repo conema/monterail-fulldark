@@ -25,6 +25,7 @@ override chrome://messenger/skin/tabs/selected-end.svg			chrome://MonterailOverl
 override chrome://messenger/skin/multimessageview.css			chrome://MonterailOverlay/skin/css/multiMessage.css
 override chrome://messagebody/skin/messageBody.css			chrome://messenger/skin/messageBody.css
 override chrome://global/skin/filefield.css				chrome://messenger/skin/filefield.css					os=Linux
+override chrome://messenger/skin/glodaFacetView.css              chrome://MonterailOverlay/skin/css/searchWindow.css
 
 #toolkit overrides
 override chrome://global/skin/icons/close.png				chrome://global/skin/icons/close-win7.png		os=WINNT osversion<=6.1

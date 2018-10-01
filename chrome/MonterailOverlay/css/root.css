@@ -23,7 +23,8 @@
 	
 	/* Fonts */
     --default-font: LightSans;
-	--message-list-text-color: #fff;
+    --message-list-text-color: #fff;
+    --link-color: #80CAFE;
 	
 	/*Message row & Folder row height */
     --message-list-row-height: 40px;

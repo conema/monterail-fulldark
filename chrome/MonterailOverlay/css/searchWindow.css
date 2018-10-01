@@ -1,0 +1,866 @@
+@import url(chrome://MonterailOverlay/skin/css/root.css);
+
+/* glodaFacetView.css - I didn't find a way for style the xul
+ * Edits at the end */
+
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+html {
+background:white;
+height: 100%;
+}
+
+body {
+padding: 0;
+margin: 0;
+font-family: sans-serif;
+background: white;
+height: 100%;
+}
+
+#table {
+display: table;
+width: 100%;
+height: 100%;
+position: relative;
+background: white;
+}
+
+#table>div {
+display: table-row;
+}
+
+.facets-sidebar {
+display: table-cell;
+width: 20em;
+max-width: 20em;
+padding: 4px;
+min-height: 100%;
+padding-inline-start: 1em;
+font-size: 90%;
+}
+
+#main-column {
+padding-inline-start: 1em;
+display: table-cell;
+}
+
+#header {
+position: relative;
+max-width: 40em;
+display: block;
+}
+
+#data-column {
+margin-top: 1em;
+margin-inline-end: 1em;
+max-width: 40em;
+}
+
+.popup-menu {
+position: absolute;
+z-index: 100;
+color: #3465a4;
+font-size: 80%;
+overflow: hidden;
+border-radius: 5px;
+box-shadow: 1px 1px 1px black;
+}
+
+.popup-menuitem {
+border: 1px solid #729fcf;
+border-radius: 5px;
+background: white;
+padding: 20px;
+padding-top: 0px;
+text-align: center;
+}
+
+.popup-menu[variety="remainder"] .undo {
+display: none;
+}
+.popup-menu[variety="include"] .top {
+display: none;
+}
+.popup-menu[variety="include"] .bottom {
+display: none;
+}
+.popup-menu[variety="exclude"] .top {
+display: none;
+}
+.popup-menu[variety="exclude"] .bottom {
+display: none;
+}
+
+.popup-menuitem.top {
+border-bottom-left-radius: 0;
+border-bottom-right-radius: 0;
+padding-top: 5px;
+padding-bottom: 5px;
+border-bottom: 0px;
+}
+
+.popup-menuitem.bottom {
+border-top-left-radius: 0;
+border-top-right-radius: 0;
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+.popup-menuitem.undo {
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+.popup-menuitem:focus {
+background-color: #729fcf;
+color: #ffffff;
+cursor: pointer;
+}
+
+.popup-menu[variety="invisible"] {
+display: none;
+}
+
+/* ===== Query Explanation ===== */
+
+#query-explanation {
+display: block;
+height: 40px;
+font-size: 140% !important;
+padding: 2px;
+padding-inline-start: 0;
+padding-top: 1em;
+padding-inline-end: 80px;
+}
+
+.explanation-fulltext-label {
+color: #3465a4;
+margin: 0 0.1em;
+}
+
+.explanation-fulltext-term {
+color: black;
+margin: 0 0.1em;
+}
+
+.explanation-fulltext-criteria {
+color: #888;
+margin: 0 0.1em;
+}
+
+.explanation-query-label {
+margin-top: 1ex;
+}
+
+.explanation-query-label,
+.explanation-query-involves,
+.explanation-query-tagged {
+color: #3465a4;
+margin-inline-end: 0.5ex;
+}
+
+/* ===== Facets ===== */
+
+h1, h2, h3 {
+color: #555753;
+cursor: default;
+}
+
+#filter-header-label {
+margin: 0;
+margin-top: 1em;
+}
+
+.facetious[uninitialized] {
+display: none !important;
+}
+
+.facetious {
+display: list-item; /* take the whole column width */
+list-style: none;
+padding: 2px;
+}
+
+.bar[selected="true"] {
+background: Highlight;
+color: HighlightText;
+}
+
+
+h1 {
+font-size: medium !important;
+padding-bottom: 0.5em;
+}
+
+h2 {
+display: block;
+margin: 0;
+font-size: 100%;
+margin-top: 1em;
+margin-bottom: 0.5em;
+}
+
+.facet > h3,
+.facet-content > h3 {
+font-size: 90%;
+padding-inline-start: 0;
+margin-top: 0.5em;
+margin-bottom: 0.5em;
+}
+
+.facet-included-header[state="empty"],
+.facet-excluded-header[state="empty"],
+.facet-remaindered-header[needed="false"] {
+display: none;
+}
+
+.facet-included-header[state="empty"] + .facet-included,
+.facet-excluded-header[state="empty"] + .facet-excluded,
+.facet-remaindered:empty {
+display: none;
+}
+
+.facet-excluded > .bar > .bar-link {
+text-decoration: line-through; /* strike the names of exluded facets */
+}
+
+.date-wrapper {
+position: relative;
+height: 80px;
+display: block;
+padding: 0px;
+padding-top: 0.5em;
+margin-inline-end: 1em;
+padding-inline-start: 2em;
+padding-bottom: 1em;
+}
+
+#date-toggle {
+position: absolute;
+right: 1em;
+bottom: 0;
+margin: 5px;
+font-size: 90%;
+text-align: end;
+display: none;
+width: 46px !important;
+height: 17px !important;
+margin-inline-end: 2px;
+margin-top: 2px;
+padding: 4px;
+background-image: url("chrome://messenger/skin/icons/timeline.png");
+background-position: center;
+background-repeat: no-repeat;
+border-radius: 4px;
+}
+
+html[dir="rtl"] #date-toggle {
+right: auto;
+left: 1em;
+}
+
+#date-toggle:hover,
+#date-toggle:focus {
+background-color: #729fcf;
+color: #ffffff;
+background-image: url("chrome://messenger/skin/icons/timeline-inverted.png");
+}
+
+
+.facet-date-zoom-out {
+position: absolute;
+top: -18px;
+left: 0;
+width: 24px !important;
+height: 24px !important;
+background-position: center center;
+background-repeat: no-repeat;
+border-radius: 4px;
+}
+
+html[dir="rtl"] .facet-date-zoom-out {
+left: auto;
+right: 0;
+}
+
+.facetious[type="date"][zoomedout="false"] .facet-date-zoom-out {
+background-image: url("chrome://messenger/skin/icons/zoomout.png");
+background-color: #babdb6;
+cursor: pointer;
+}
+
+.facetious[type="date"][zoomedout="false"] .facet-date-zoom-out:hover {
+background-image: url("chrome://messenger/skin/icons/zoomout-hover.png");
+background-color: #729fcf;
+}
+
+.date-vis-frame {
+position: absolute;
+top: 0;
+left: 0;
+}
+
+html[dir="rtl"] .date-vis-frame {
+left: auto;
+right: 0;
+}
+
+/* === Boolean Facet === */
+
+#facet-fromMe, #facet-toMe, #facet-star, #facet-attachmentTypes {
+display: inline-block; /* override the general .facetious list-item style */
+}
+
+/* special case: hide these two facets when they don't match */
+#facet-star[disabled], #facet-attachmentTypes[disabled] {
+display: none;
+}
+
+.facetious[type="boolean"][disabled] {
+color: #888888;
+}
+
+.facet-checkbox-bubble {
+padding: 2px;
+padding-inline-end: 6px;
+border: solid transparent 1px;
+cursor: pointer;
+color: #333;
+font-size: 90%;
+}
+
+
+.facetious[type="boolean"][disabled] > .facet-checkbox-bubble,
+.facetious[type="boolean-filtered"][disabled] > .facet-checkbox-bubble {
+cursor: default;
+color: #777;
+}
+
+.facetious[type="boolean"]:not([disabled]):hover > .facet-checkbox-bubble,
+.facetious[type="boolean-filtered"]:not([disabled]):hover > .facet-checkbox-bubble {
+background-color: #729fcf;
+border-radius: 4px;
+color: #ffffff;
+
+}
+
+
+
+.facet-checkbox-label {
+}
+
+.facet-checkbox-count {
+color: GrayText;
+}
+.facet-checkbox-count:empty {
+display: none;
+}
+.facet-checkbox-count:before {
+content: " (";
+}
+.facet-checkbox-count:after {
+content: ")";
+}
+
+/* === Boolean Filtered === */
+
+.facetious[type="boolean-filtered"]:not([checked]) > .facet-filter-list {
+display: none
+}
+
+.facet-filter-list {
+display: block;
+}
+
+/* === Discrete Facet === */
+
+.facet-content {
+max-height: 32em;
+overflow: auto;
+}
+
+
+.facet-more[needed="true"] {
+display: inline-block;
+margin: 1px;
+margin-top: 0.5em;
+padding: 0.2em 1em;
+font-weight: normal;
+font-size: 85%;
+color: #000000;
+background-color: #babdb6;
+cursor: pointer;
+border-radius: 4px;
+}
+
+.facet-more[needed="true"]:hover,
+.facet-more[needed="true"]:focus {
+background-color: #729fcf;
+color: #ffffff;
+text-decoration: none;
+}
+
+.facet-more[needed="false"] {
+display: none;
+}
+
+.facet-more:hover {
+text-decoration: underline;
+}
+
+.bar {
+display: block;
+}
+
+.bar-count {
+position: absolute;
+right: 3px;
+margin-inline-end: 1.5em;
+line-height: 1.6em;
+color: GrayText;
+}
+
+html[dir="rtl"] .bar-count {
+right: auto;
+left: 3px;
+}
+
+.barry {
+border-top: 1px solid #ccc;
+margin: 0;
+padding: 0;
+/*padding: 4px;*/
+}
+
+.bar {
+display: block;
+position: relative;
+border-bottom: 1px solid #ccc;
+cursor: pointer;
+font-size: 80%;
+}
+
+
+.bar:hover {
+background: #e2e2e2;
+}
+
+.bar-link {
+display: inline-block;
+color: #2D7BB2;
+text-decoration: none;
+display: block;
+padding: 0.3em 2em 0.3em 0.5em;
+padding-inline-end: 4em;
+position: relative;
+z-index: 2;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+html[dir="rtl"] .bar-link {
+padding: 0.3em 0.5em 0.3em 2em;
+}
+
+.bar:hover > .bar-link {
+color: #333;
+}
+
+.bar:focus {
+background: Highlight;
+outline: none;
+}
+
+.bar:focus > .bar-link {
+color: HighlightText;
+}
+.bar:focus > .bar-count {
+color: HighlightText;
+}
+.bar[selected="true"]> .bar-link {
+color: HighlightText;
+}
+.bar[selected="true"] > .bar-count {
+color: HighlightText;
+}
+
+
+.bar-percent {
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+background: #e9f2f5;
+text-indent: -9999px;
+overflow: hidden;
+line-height: 1.6em;
+}
+
+html[dir="rtl"] .bar-percent {
+left: auto;
+right: 0;
+text-indent: 9999px;
+}
+
+.bar:hover > .bar-percent {
+background: #ceeaf5;
+}
+
+/* ===== Results ===== */
+
+.results-message-header {
+display: none; /* $('.results-message-header').show() is run if there are results */
+width: 100%;
+background-color: #edeeef;
+border-top: 2px solid #ddd;
+padding: 2px;
+margin-bottom: 0.5em;
+}
+
+#results[state="some"] .results-message-header {
+display: table;
+}
+
+.results-message-count {
+display: table-cell;
+margin: 0;
+padding-inline-start: 2px;
+font-weight: normal;
+font-size: small;
+}
+
+.results-message-showall {
+display: table-cell;
+}
+
+.results-message-showall-button {
+padding: 0.2em 1em;
+font-size: small;
+border-radius: 4px;
+cursor: pointer;
+text-align: center;
+}
+
+.results-message-showall-button:hover,
+.results-message-showall-button:focus {
+background-color: #729fcf;
+color: #ffffff;
+text-decoration: none;
+}
+
+
+.results-message-sort-bar {
+display: table-cell;
+padding-inline-end: 2px;
+text-align: end;
+font-size: small;
+}
+
+.results-message-sort-label {
+color: grey;
+}
+
+.results-message-sort-value {
+padding: 0.2em;
+}
+
+.results-message-sort-value:hover,
+.results-message-sort-value:focus {
+border-radius: 4px;
+background-color: #729fcf;
+color: #ffffff;
+cursor: pointer;
+}
+
+.results-message-sort-value[selected="true"] {
+font-weight: bold;
+}
+
+.results-message-sort-value[selected="true"]:hover,
+.results-message-sort-value[selected="true"]:focus {
+cursor: default;
+background-color: #dcddde;
+color: #000000;
+}
+
+/* ===== Messages ===== */
+
+.message {
+display: block;
+font-family: sans-serif;
+font-size: small;
+padding: 3px 0;
+margin: 3px 0;
+border-bottom: 1px solid #ddd;
+color: #555;
+background-color: #ffffff;
+}
+
+.message:hover .message-subject {
+color: #000000;
+background-color: #e0eaf5;
+}
+
+.message .message-subject:hover,
+.message .message-subject:focus {
+color: #ffffff;
+background-color: #729fcf;
+}
+
+.message:focus {
+border: 1px dotted #111;
+padding: 1em 0px;
+}
+.message[unread="true"]:focus {
+border: 1px dotted #111;
+padding: 1em 0px;
+}
+.message:focus:last-child {
+border: 1px dotted #111;
+padding: 1em 0px;
+}
+.message:focus:first-child {
+border: 1px dotted #111;
+padding: 1em 0px;
+}
+.message:last-child {
+border-bottom: 1px solid transparent;
+}
+
+.message-header {
+margin-bottom: 0.5em;
+}
+.message-meta {
+float: right;
+padding-inline-start: 2em;
+text-align: end;
+max-width: 20em;
+max-height: 10em;
+overflow: hidden;
+color: #999;
+}
+
+html[dir="rtl"] .message-meta {
+float: left;
+}
+
+.message-attachments {
+text-align: end;
+overflow: hidden;
+}
+
+.message-attachment {
+max-width: 20em;
+text-align: start;
+display: inline-block;
+white-space: nowrap;
+padding-inline-start: 1ex;
+}
+
+.message-attachment:after {
+content: ", ";
+}
+.message-attachment:last-child:after {
+content: "";
+}
+
+
+.message-attachment-icon {
+display: inline-block;
+width: 18px;
+height: 18px;
+background: url("chrome://messenger/skin/icons/attachment.png") transparent no-repeat center right;
+}
+
+html[dir="rtl"] .message-attachment-icon {
+background-position: center left;
+}
+
+.message-line {
+position: relative;
+}
+
+.message-addresses-group {
+text-align: end;
+}
+
+.message-date {
+color: #999;
+}
+
+.message-star[starred="true"] {
+display: inline-block;
+width: 12px !important;
+height: 12px;
+background-image: url("chrome://messenger/skin/icons/flag-col.png");
+}
+
+.message-addresses-group {
+padding-inline-start: 1em;
+}
+
+.message-subject-group {
+padding-inline-start: 2px; /* to line up the subjects with the "Top N messages out of M" */
+}
+
+.message-author, .message-recipients {
+text-align: end;
+display: inline;
+color: #222;
+}
+
+.message-subject {
+color: #3465a4;
+font-size: medium;
+}
+
+.message-subject:hover {
+cursor: pointer;
+}
+
+.message-body {
+color: black;
+margin-inline-start: 1em;
+font-family: monospace;
+font-size: medium;
+white-space: pre-wrap;
+}
+
+.message-body-fulltext-match {
+background-color: rgb(187, 208, 231);
+border-radius: 3px;
+}
+
+.message-recipients-group {
+margin-inline-start: 0.5em;
+font-size: small;
+}
+
+.message-tag {
+display: inline-block; /* to avoid splitting 'To' and 'Do' e.g. */
+margin-inline-start: 0px;
+margin-inline-end: 3px;
+padding: 0 0.5ex;
+background-image: url("chrome://messenger/skin/tagbg.png");
+border-radius: 3px;
+border-style: outset;
+border-width: 0.5px;
+text-shadow: 0 1px 0 rgba(238,238,236,0.4); /* Tango Alumninum 1 */
+color: #111111;
+}
+
+.message-folder {
+background-color: #faf0b8;
+border: 1px solid #ede4af;
+}
+
+.show-more {
+display: none; /* $('.show-more').show() is run if there are results */
+background-color: #babdb6;
+border-radius: 4px;
+float: right;
+padding: 0.2em 1em;
+font-size: small;
+margin-inline-end: 1em;
+margin-bottom: 2em;
+color: #000000;
+}
+
+html[dir="rtl"] .show-more {
+float: left;
+}
+
+.show-more:hover,
+.show-more:focus {
+background-color: #729fcf;
+color: #ffffff;
+cursor: pointer;
+}
+
+div.loading, div.empty {
+margin: 0 auto;
+text-align: center;
+}
+
+span.loading, span.empty {
+color: ButtonText;
+background-color: ButtonFace;
+border: 1px outset ThreeDShadow;
+border-radius: 3px;
+}
+
+img.loading, img.empty {
+margin: 0 1ex;
+padding: 0;
+border: none;
+vertical-align: middle;
+}
+
+html[dir="rtl"] img.empty {
+transform: scaleX(-1);
+}
+
+div.empty {
+display: none;
+}
+
+span.empty {
+background-color: inherit;
+border: none;
+font-size: large;
+color: #729fcf;
+}
+
+#facet-date {
+max-height: 104px;
+padding-top: 2px;
+padding-bottom: 2px;
+overflow: visible;
+transition: all .2s;
+}
+
+#facet-date[hide="true"] {
+max-height: 0px;
+padding-top: 0px;
+padding-bottom: 0px;
+}
+  
+
+  /* Monterail edits*/
+
+#main-column, .message, .results-message-header {
+    background: var(--thread-background-color);
+}
+
+.message, .message-body, .message-meta, .message-recipients, .explanation-fulltext-term, .results-message-header, .results-message-count, .bar:hover > .bar-link {
+    color: var(--message-list-text-color);
+}
+
+.message-body-fulltext-match {
+    background-color: rgb(121, 134, 147);
+}
+
+.facets-sidebar {
+    background-color: var(--background-color);
+}
+
+.facets-sidebar *, .bar-count {
+    color: var(--message-list-text-color);
+}
+
+.bar-link, .message-subject, .explanation-fulltext-label {
+    color: var(--link-color);
+}
+
+.bar:hover {
+    background: var(--tree-background-color-hover);
+}
+
+.bar:focus, .bar[selected="true"] {
+    background: var(--tree-background-color-selected);
+}
