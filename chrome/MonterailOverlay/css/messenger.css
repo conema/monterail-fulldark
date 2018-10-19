@@ -50,7 +50,7 @@
 
 #attachmentView>#attachmentBar {
     color: var(--message-list-text-color);
-    background-color: #fcfcfc;
+    background-color: var(--background-color);
 }
 
 .tabmail-tab .tab-background-middle[selected=true] {
