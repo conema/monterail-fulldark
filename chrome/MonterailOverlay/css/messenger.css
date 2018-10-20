@@ -48,9 +48,18 @@
     border: 0;
 }
 
-#attachmentView>#attachmentBar {
+#attachmentView>#attachmentBar:not(:-moz-lwtheme):not(:-moz-window-inactive) {
     color: var(--message-list-text-color);
     background-color: var(--background-color);
+}
+
+#attachmentView>#attachmentBar:not(:-moz-lwtheme):-moz-window-inactive {
+    color: var(--message-list-text-color);
+    background-color: var(--background-color-inactive);
+}
+
+#attachmentView {
+    border: 0;
 }
 
 .tabmail-tab .tab-background-middle[selected=true] {
@@ -289,6 +298,17 @@ statusbar {
     -moz-appearance: none;
     background-color: var(--background-color) !important;
     color: #fff;
+}
+
+.moreIndicator {
+    font-weight: bold;
+    color: #fff;
+}
+
+.moreIndicator:hover {
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 /* Calendar */
