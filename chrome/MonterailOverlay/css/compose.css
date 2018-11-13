@@ -23,7 +23,7 @@
     color: #fff !important;
 }
 
-#msgSubject:hover, #msgSubject[focused="true"], #msgIdentity:hover, #msgIdentity:focus, #msgIdentity[focused="true"], .textbox-addressingWidget[focused="true"], .textbox-addressingWidget:hover {
+#msgSubject, #msgSubject:hover, #msgSubject[focused="true"], #msgIdentity:hover, #msgIdentity:focus, #msgIdentity[focused="true"], .textbox-addressingWidget[focused="true"], .textbox-addressingWidget:hover {
     background-color: var(--background-color-light);
     color: #fff;
 }
@@ -122,6 +122,6 @@ menuseparator {
     background-color: var(--background-color-light);
 }
 
-#addressCol1\#1 {
+menulist.aw-menulist, textbox.textbox-addressingWidget {
     color: #fff;
 }
