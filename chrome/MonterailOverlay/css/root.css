@@ -42,6 +42,11 @@
     /* Search Box */
     --search-background-color: var(--background-color);
     --search-text-color: #fff;
+
+    /* Date filter search */
+    --dateColor: var(--background-color);
+    --barHlColor: var(--tree-background-color-selected);
+    --barColor: var(--tree-background-color-selected);
 }
 
 * {
@@ -131,4 +136,30 @@ thumb:hover {
 .searchBox, #view-task-edit-field, #unifinder-task-edit-field {
     background-color: var(--search-background-color);
     color: var(--search-text-color);
+}
+
+/* Search date filter */
+#date-toggle {
+    fill: #729fcf;
+    color: #ffffff;
+    background-image: url("chrome://messenger/skin/icons/timeline.svg") !important;
+    background-color: transparent !important;
+    -moz-context-properties: fill;
+}
+
+.facetious[type="date"][zoomedout="false"] .facet-date-zoom-out {
+    background-color: var(--background-color) !important;
+    background-image: url("chrome://messenger/skin/icons/zoomout-hover.png") !important;
+}
+
+.facetious[type="date"][zoomedout="false"] .facet-date-zoom-out:hover {
+    background-color: var(--tree-background-color-selected) !important;
+}
+
+#date-toggle:hover {
+    fill: var(--tree-background-color-selected) !important;
+}
+
+#facet-date text {
+    fill: var(--headers-background-color);
 }
