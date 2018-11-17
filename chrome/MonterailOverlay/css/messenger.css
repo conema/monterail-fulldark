@@ -158,13 +158,22 @@ toolbar[brighttext]>.toolbarbutton-1 {
     --treechildren-hoverCurrentBackground: rgba(255,255,255,.1);
 }
 
+#threadTree treechildren::-moz-tree-row(container, hover) {
+    background: var(--tree-background-color-hover) !important;
+}
+
+#threadTree treechildren::-moz-tree-row(container, selected) {
+    background: var(--tree-background-color-selected) !important;
+}
+
 #threadContentArea>#threadTree, 
 #calendar-task-tree treechildren,
 #calendar-task-tree treechildren::-moz-tree-row(even),
 #calendar-task-tree treechildren::-moz-tree-row(odd),
 #unifinder-search-results-tree>treechildren,
 #unifinder-search-results-tree>treechildren::-moz-tree-row(even),
-#unifinder-search-results-tree>treechildren::-moz-tree-row(odd) {
+#unifinder-search-results-tree>treechildren::-moz-tree-row(odd),
+#threadTree treechildren::-moz-tree-row(container) {
     background-color: var(--thread-background-color);
 }
 
