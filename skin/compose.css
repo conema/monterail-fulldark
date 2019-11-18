@@ -1,0 +1,171 @@
+@import url(chrome://MonterailOverlay-OS/skin/compose.css);
+@import url(chrome://MonterailOverlay/skin/root.css);
+@import url(chrome://MonterailOverlay/skin/icons/css/compose.css);
+
+#msgIdentity,
+textbox.textbox-addressingWidget,
+.dummy-row-cell:last-child,
+#msgSubject {
+    color: #fff !important;
+}
+
+#appcontent {
+    border: 0;
+}
+
+#msgIdentity:hover,
+#msgSubject:hover,
+textbox.textbox-addressingWidget:hover {
+    background: transparent !important;
+    border-bottom: 1px solid var(--composer-header-border-color) !important;
+}
+
+textbox.textbox-addressingWidget[focused="true"],
+#msgSubject[focused="true"],
+#msgIdentity[focused="true"] {
+    background: var(--background-color-light) !important;
+}
+
+#status-bar,
+#compose-toolbar-sizer {
+    background-color: var(--background-color-light) !important;
+    color: var(--message-list-text-color) !important;
+    background-image: none !important;
+}
+
+#headers-box>#MsgHeadersToolbar,
+#FormatToolbox>#FormatToolbar {
+    color: var(--message-list-text-color);
+    background-color: var(--background-color-light);
+    -moz-appearance: none;
+}
+
+#compose-toolbox>#composeToolbar2,
+#compose-toolbox>#compose-toolbar-menubar2,
+#compose-toolbox>toolbar[id^="__customToolbar"] {
+    background-color: var(--background-color) !important;
+    color: #fff !important;
+    -moz-appearance: none;
+    margin-top: -2px;
+    margin-bottom: -2px;
+}
+
+#compose-toolbox>#compose-toolbar-menubar2:-moz-window-inactive,
+#compose-toolbox > #composeToolbar2:-moz-window-inactive,
+#menubar-items > #mail-menubar > menu:-moz-window-inactive {
+    color: #ddd !important;
+    background-color: var(--background-color-inactive) !important;
+}
+
+#menubar-items > #mail-menubar > menu:not([disabled="true"])[_moz-menuactive="true"],
+#menubar-items > #mail-menubar > menu {
+    color: #fff;
+}
+
+.menubar-text,
+.menulist-description {
+    color: #fff !important;
+}
+
+#msgSubject, #msgSubject:hover, #msgSubject[focused="true"], #msgIdentity:hover, #msgIdentity:focus, #msgIdentity[focused="true"], .textbox-addressingWidget[focused="true"], .textbox-addressingWidget:hover {
+    background-color: var(--background-color-light);
+    color: #fff;
+}
+
+#compose-toolbox>#composeToolbar2{
+    background-color: var(--background-color);
+    color: #fff;
+    -moz-appearance: none;
+}
+
+.toolbarbutton-1 {
+    -moz-context-properties: fill;
+}
+
+.toolbarbutton-1,
+.toolbarbutton-menubutton-button {
+    color: #fff;
+    fill: #fff;
+}
+
+toolbar[brighttext]>.toolbarbutton-1 {
+    fill: #fff;
+}
+
+.toolbarbutton-1:-moz-window-inactive .toolbarbutton-icon,
+.toolbarbutton-1:-moz-window-inactive>.toolbarbutton-text,
+.toolbarbutton-menubutton-button:-moz-window-inactive>.toolbarbutton-icon,
+.toolbarbutton-menubutton-button:-moz-window-inactive>.toolbarbutton-text {
+    opacity: 0.5;
+}
+
+.toolbarbutton-menubutton-button>.toolbarbutton-icon,
+.toolbarbutton-1 .toolbarbutton-icon {
+    width: 16px !important;
+    height: 16px !important;
+    margin: 1px !important;
+}
+
+.emailDisplayButton:hover{
+    background-color: var(--tree-background-color-selected);
+}
+
+#msgHeaderView {
+    color: var(--headers-text-color) !important;
+    background-color: var(--headers-background-color) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25) !important;
+}
+
+.msgHeaderView-button {
+    min-width: 0px !important;
+    border-color: transparent !important;
+    background-color: transparent !important;
+    margin: 0px !important;
+}
+
+.msgHeaderView-button:hover {
+    border-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+.msgHeaderView-button>label {
+    display: none;
+}
+
+#expandedHeader2Rows row {
+    display: block !important;
+}
+
+#expandedHeaderRows row *,
+#expandedHeader2Rows row * {
+    color: var(--headers-text-color) !important;
+}
+
+#expandedsubjectLabel,
+#expandedfromLabel {
+    display: none !important;
+}
+
+#expandedHeader2Rows #expandedreply-toRow {
+    display: none !important;
+}
+
+#expandedsubjectBox .headerValue {
+    font-size: var(--subject-line-font-size) !important;
+}
+
+.emailStar {
+    margin-inline-start: 2px !important;
+}
+
+menuseparator {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+#headers-parent {
+    background-color: var(--background-color-light);
+}
+
+menulist.aw-menulist, textbox.textbox-addressingWidget {
+    color: #fff;
+}

@@ -1,0 +1,4 @@
+/* Fix black text on compose menu TH 52 */
+toolbar:not(.inline-toolbar) .toolbarbutton-1 .toolbarbutton-text {
+    color: #fff;
+} 

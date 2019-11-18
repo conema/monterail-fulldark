@@ -1,0 +1,40 @@
+#button-save {
+    list-style-image: url("chrome:../save.svg") !important;
+}
+
+#button-saveandclose {
+    list-style-image: url("chrome:../event_saveandclose.svg") !important;
+}
+
+#button-attendees {
+    list-style-image: url("chrome:../event_invite.svg") !important;
+}
+
+#button-privacy {
+    list-style-image: url("chrome:../Composer_Security.svg") !important;
+}
+
+#button-url {
+    list-style-image: url("chrome:../Composer_Attach.svg") !important;
+}
+
+#button-delete.cal-event-toolbarbutton {
+    list-style-image: url("chrome:../delete.svg") !important;
+    -moz-image-region: auto !important;
+}
+
+#button-priority {
+    list-style-image: url("chrome:../priority.svg") !important;
+}
+
+#button-status {
+    list-style-image: url("chrome:../event_status.svg") !important;
+}
+
+#button-freebusy {
+    list-style-image: url("chrome:../event_busystate.svg") !important;
+}
+
+#button-timezones {
+    list-style-image: url("chrome:../event_timezones.svg") !important;
+}

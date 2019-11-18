@@ -1,0 +1,380 @@
+.tab-icon-image, .close-icon > .toolbarbutton-icon {
+    fill: #fff;
+}
+
+.tabmail-tabs > .tabmail-tab[type="folder"],
+#folderTree > treechildren::-moz-tree-image(folderNameCol) {
+    list-style-image: url("chrome:../folder.svg");
+    -moz-image-region: auto !important;
+    fill: #a1dae6;
+}
+
+/* Inbox */
+
+#folderTree>treechildren::-moz-tree-image(folderNameCol, specialFolder-Inbox),
+#folderTree>treechildren::-moz-tree-image(folderNameCol, specialFolder-Inbox, open) {
+    list-style-image: url("chrome:../inbox.svg");
+    fill: #fff;
+}
+
+.tabmail-tabs>.tabmail-tab[type="folder"][SpecialFolder="Inbox"],
+.tabmail-tabs>.tabmail-tab[type="folder"][SpecialFolder="Inbox"][selected="true"] {
+    list-style-image: url("chrome:../inbox.svg");
+}
+
+/* Sent */
+
+.tabmail-tabs>.tabmail-tab[type="folder"][SpecialFolder="Sent"],
+#folderTree>treechildren::-moz-tree-image(folderNameCol, specialFolder-Sent),
+#folderTree>treechildren::-moz-tree-image(folderNameCol, specialFolder-Sent, open),
+.tabmail-tabs>.tabmail-tab[type="folder"][SpecialFolder="Sent"][selected="true"] {
+    list-style-image: url("chrome:../sent.svg");
+    fill: #fff;
+}
+
+/* Unsent */
+
+#folderTree>treechildren::-moz-tree-image(folderNameCol, specialFolder-Outbox),
+.tabmail-tabs>.tabmail-tab[type="folder"][SpecialFolder="Outbox"],
+.tabmail-tabs>.tabmail-tab[type="folder"][SpecialFolder="Outbox"][selected="true"] {
+    list-style-image: url("chrome:../outbox.svg");
+}
+
+/* Drafts */
+
+.tabmail-tabs>.tabmail-tab[type="folder"][SpecialFolder="Drafts"],
+#folderTree>treechildren::-moz-tree-image(folderNameCol, specialFolder-Drafts),
+#folderTree>treechildren::-moz-tree-image(folderNameCol, specialFolder-Drafts, open) {
+    list-style-image: url("chrome:../draft.svg");
+    fill: #b8e986;
+}
+
+/* Templates */
+
+.tabmail-tabs>.tabmail-tab[type="folder"][SpecialFolder="Templates"],
+#folderTree>treechildren::-moz-tree-image(folderNameCol, specialFolder-Templates) {
+    list-style-image: url("chrome:../template.svg");
+    fill: #fff;
+}
+
+/* Mail server */
+
+.tabmail-tabs>.tabmail-tab[type="folder"][IsServer="true"][selected="true"] {
+    list-style-image: url("chrome:../email-account-light.svg") !important;
+}
+
+.tabmail-tabs>.tabmail-tab[type="folder"][IsServer="true"] {
+    list-style-image: url("chrome:../email-account-light.svg") !important;
+}
+
+treechildren::-moz-tree-image(folderNameCol, isServer-true) {
+    list-style-image: url("chrome:../email-account-light.svg") !important;
+}
+
+/* Junk */
+
+.tabmail-tabs>.tabmail-tab[type="folder"][SpecialFolder="Junk"],
+#folderTree>treechildren::-moz-tree-image(folderNameCol, specialFolder-Junk),
+#folderTree>treechildren::-moz-tree-image(folderNameCol, specialFolder-Junk, open) {
+    list-style-image: url("chrome:../flame_junk.svg");
+    fill: #fff;
+}
+
+/* Trash */
+
+.tabmail-tabs>.tabmail-tab[type="folder"][SpecialFolder="Trash"],
+#folderTree>treechildren::-moz-tree-image(folderNameCol, specialFolder-Trash),
+#folderTree>treechildren::-moz-tree-image(folderNameCol, specialFolder-Trash, open) {
+    list-style-image: url("chrome:../trash.svg");
+}
+
+/* Archives */
+
+.tabmail-tabs>.tabmail-tab[type="folder"][SpecialFolder="Archive"],
+#folderTree>treechildren::-moz-tree-image(folderNameCol, specialFolder-Archive) {
+    list-style-image: url("chrome:../panearchive.svg");
+}
+
+/* Saved Search Folder */
+
+.tabmail-tabs>.tabmail-tab[type="folder"][SpecialFolder="Virtual"],
+#folderTree>treechildren::-moz-tree-image(folderNameCol, specialFolder-Virtual) {
+    list-style-image: url("chrome:../savedSearch.svg");
+    fill: #fff;
+}
+
+/* Newsgroup */
+
+.tabmail-tabs>.tabmail-tab[type="folder"][ServerType="nntp"],
+#folderTree>treechildren::-moz-tree-image(folderNameCol, serverType-nntp) {
+    list-style-image: url("chrome:../news.svg");
+}
+
+/* Feed */
+
+.tabmail-tabs>.tabmail-tab[type="folder"][IsFeedFolder="true"],
+#folderTree>treechildren::-moz-tree-image(folderNameCol, isFeed-true),
+#folderTree>treechildren::-moz-tree-image(folderNameCol, isFeedFolder-true) {
+    list-style-image: url("chrome:../rss.svg");
+    fill: #fff;
+}
+
+#folderTree>treechildren::-moz-tree-image(folderNameCol, serverIsPaused),
+#folderTree>treechildren::-moz-tree-cell-text(folderNameCol, serverIsPaused),
+#folderTree>treechildren::-moz-tree-image(folderNameCol, isPaused),
+#folderTree>treechildren::-moz-tree-cell-text(folderNameCol, isPaused) {
+    opacity: 0.4;
+}
+
+#folderTree>treechildren::-moz-tree-image(folderNameCol, closed, hasError),
+#folderTree>treechildren::-moz-tree-image(folderNameCol, leaf, hasError) {
+    list-style-image: url("chrome:../warning.svg");
+}
+
+#folderTree>treechildren::-moz-tree-cell-text(folderNameCol, newMessages-true),
+#folderTree>treechildren::-moz-tree-cell-text(folderNameCol,
+specialFolder-Inbox, newMessages-true) {
+    font-weight: bold;
+}
+
+/* All Servers */
+
+#folderTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(folderNameCol, isServer-true, biffState-NewMail),
+#folderTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(folderNameCol, newMessages-true),
+#folderTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(folderNameCol, specialFolder-Inbox, newMessages-true) {
+    color: #b2f2ff;
+}
+
+#folderTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(closed, subfoldersHaveUnreadMessages-true) {
+    color: #fff;
+    font-weight: bold;
+}
+
+#folderTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(folderNameCol, isServer-true),
+#folderTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(hasUnreadMessages-true) {
+    font-weight: bold;
+}
+
+#folderTree>treechildren::-moz-tree-cell-text(folderNameCol, newMessages-true) {
+    font-weight: bold;
+    margin-inline-start: -12px;
+    padding-inline-start: 14px;
+    background-image: url("chrome:../folder-new-star.png");
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+#folderTree:-moz-locale-dir(rtl)>treechildren::-moz-tree-cell-text(folderNameCol, newMessages-true) {
+    background-position: right;
+}
+
+/* twisty */
+
+#folderTree>treechildren::-moz-tree-twisty {
+    -moz-appearance: none;
+    padding-inline-start: 5px;
+    padding-inline-end: 5px;
+    padding-top: 1px;
+    width: 9px;
+    list-style-image: url("chrome:../twisty.svg") !important;
+    fill: #fff;
+}
+
+#folderTree>treechildren::-moz-tree-twisty(open) {
+    -moz-appearance: none;
+    list-style-image: url("chrome:../twisty-open.svg") !important;
+    fill: #fff;
+}
+
+#threadCols>.attachmentColumnHeader>.treecol-icon,
+#threadTree>treechildren::-moz-tree-image(attachmentCol, attach) {
+    width: 11px;
+    height: 11px;
+    list-style-image: url("chrome:../paperclip.svg");
+    -moz-image-region: auto !important;
+    fill: -moz-dialogtext;
+}
+
+#threadTree>treechildren::-moz-tree-image(attachmentCol, attach, selected) {
+    list-style-image: url("chrome:../paperclip-selected.svg");
+}
+
+#threadCols>.junkStatusHeader,
+#threadTree>treechildren::-moz-tree-image(junkStatusCol) {
+    list-style-image: url("chrome:../no-spam.svg");
+    -moz-image-region: auto !important;
+    fill: -moz-dialogtext;
+}
+
+#threadTree>treechildren::-moz-tree-image(junkStatusCol, junk) {
+    list-style-image: url("chrome:../spam.svg");
+}
+
+#threadTree:-moz-locale-dir(ltr)>treechildren::-moz-tree-image(correspondentCol, outgoing, focus, selected) {
+    list-style-image: url(chrome:/messenger/skin/icons/correspondents.svg#right-selected) !important;
+}
+
+#threadTree:-moz-locale-dir(rtl)>treechildren::-moz-tree-image(correspondentCol, outgoing, focus, selected) {
+    list-style-image: url(chrome:/messenger/skin/icons/correspondents.svg#left-selected) !important;
+}
+
+/* Lightning */
+
+#lightning-button-calendar {
+    list-style-image: url("chrome:../calendar.svg") !important;
+}
+
+#lightning-button-tasks {
+    list-style-image: url("chrome:../tasks.svg") !important;
+}
+
+#calendar-synchronize-button,
+#task-synchronize-button {
+    list-style-image: url("chrome:../synchronize.svg") !important;
+}
+
+#extractEventButton,
+#task-newevent-button,
+#hdrExtractEventButton,
+#calendar-newevent-button,
+#todaypane-new-event-button {
+    list-style-image: url("chrome:../addAsEvent.svg") !important;
+}
+
+#extractTaskButton,
+#task-newtask-button,
+#hdrExtractTaskButton,
+#calendar-newtask-button,
+#calendar-add-task-button {
+    list-style-image: url("chrome:../addAsTask.svg") !important;
+}
+
+#calendar-add-task-button {
+    fill: #fff;
+}
+
+#calendar-edit-button,
+#task-edit-button {
+    list-style-image: url("chrome:../newmsg.svg") !important;
+}
+
+#calendar-delete-button,
+#task-delete-button {
+    list-style-image: url("chrome:../delete.svg") !important;
+}
+
+#calendar-goto-today-button {
+    list-style-image: url("chrome:../today.svg") !important;
+}
+
+#calendar-print-button,
+#task-print-button {
+    list-style-image: url("chrome:../print.svg") !important;
+}
+
+#calendar-unifinder-button {
+    list-style-image: url("chrome:../search-glass.svg") !important;
+}
+
+/* imip button icons */
+
+.imipAcceptButton,
+.imipAcceptRecurrencesButton {
+    list-style-image: url("chrome:../accept.svg") !important;
+}
+
+.imipDeclineCounterButton,
+.imipDeclineButton,
+.imipDeclineRecurrencesButton {
+    list-style-image: url("chrome:../decline.svg") !important;
+}
+
+.imipTentativeButton,
+.imipTentativeRecurrencesButton {
+    list-style-image: url(chrome:/calendar-common/skin/calendar-toolbar.svg#tentative) !important;
+}
+
+.imipAddButton {
+    list-style-image: url("chrome:../addAsEvent.svg") !important;
+}
+
+.imipRescheduleButton,
+.imipUpdateButton {
+    list-style-image: url("chrome:../sync.svg") !important;
+}
+
+.imipDetailsButton {
+    list-style-image: url(chrome:/calendar-common/skin/calendar-toolbar.svg#find) !important;
+}
+
+.imipDeleteButton {
+    list-style-image: url("chrome:../delete.svg") !important;
+}
+
+.imipReconfirmButton {
+    list-style-image: url("chrome:../priority.svg") !important;
+}
+
+/* hide the GTK icons */
+
+#menu_New,
+menuitem[command="cmd_newMessage"],
+splitmenu[command="cmd_newMessage"],
+#menu_newFolder,
+#appmenu_newFolder,
+#menu_newVirtualFolder,
+#appmenu_newVirtualFolder,
+#menu_newCard,
+#appmenu_newCard,
+#openMessageFileMenuitem,
+#appmenu_openMessageFileMenuitem,
+#menu_close,
+#appmenu_close,
+#appmenu_addons,
+#menu_saveAs,
+#appmenu_saveAs,
+#mailContext-saveAs,
+#mailContext-savelink,
+#mailContext-saveimage,
+menuitem[command="cmd_print"],
+#mailContext-print,
+#mailContext-print,
+menuitem[command="cmd_printpreview"],
+#mailContext-printpreview,
+#mailContext-printpreview,
+menuitem[command="cmd_quit"],
+menuitem[command="cmd_undo"],
+menuitem[command="cmd_redo"],
+menuitem[command="cmd_cut"],
+menuitem[command="cmd_copy"],
+#mailContext-copy,
+#mailContext-copyimage,
+#mailContext-copylink,
+#mailContext-copyemail,
+menuitem[command="cmd_paste"],
+menuitem[command="cmd_delete"],
+#mailContext-delete,
+#folderPaneContext-remove,
+menuitem[command="cmd_selectAll"],
+#menu_find,
+#appmenu_find,
+#folderPaneContext-searchMessages,
+#folderPaneContext-properties,
+#menu_preferences,
+#appmenu_customize,
+menuitem[command="cmd_fullZoomEnlarge"],
+menuitem[command="cmd_fullZoomReduce"],
+menuitem[command="cmd_fullZoomReset"],
+menuitem[command="cmd_goBack"],
+menuitem[command="cmd_goForward"],
+#goStartPage,
+#appmenu_goStartPage,
+#menu_openHelp,
+#appmenu_openHelp,
+#aboutName,
+#appmenu_about,
+#addressBook,
+#appmenu_addressBook,
+#javascriptConsole {
+    list-style-image: url("chrome:../empty.svg") !important;
+}

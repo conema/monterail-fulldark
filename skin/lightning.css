@@ -1,0 +1,9 @@
+@import url(chrome://MonterailOverlay/skin/root.css);
+@import url(chrome://MonterailOverlay/skin/icons/css/lightning.css);
+
+.toolbarbutton-menubutton-button>.toolbarbutton-icon,
+.toolbarbutton-1 .toolbarbutton-icon {
+    width: 16px !important;
+    height: 16px !important;
+    margin: 1px !important;
+}

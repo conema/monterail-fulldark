@@ -1,0 +1,190 @@
+.toolbarbutton-1 .toolbarbutton-menu-dropmarker, 
+.toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,
+.subviewbutton > .toolbarbutton-icon,
+#appmenu-edit-controls,
+.subviewbutton  {
+    fill: #fff;
+    color: #fff;
+}
+
+#button-getmsg {
+    list-style-image: url("chrome:../getmsg.svg") !important;
+}
+
+#button-newmsg,
+notification[value="draftMsgContent"] .messageImage {
+    list-style-image: url("chrome:../newmsg.svg") !important;
+}
+
+#button-address {
+    list-style-image: url("chrome:../addressbook.svg") !important;
+}
+
+#button-reply,
+.hdrReplyButton,
+.hdrReplyToSenderButton,
+.hdrDummyReplyButton {
+    list-style-image: url("chrome:../reply.svg") !important;
+}
+
+#button-replyall,
+.hdrReplyAllButton {
+    list-style-image: url("chrome:../replyAll.svg") !important;
+}
+
+#button-replylist,
+.hdrReplyListButton,
+.hdrFollowupButton {
+    list-style-image: url("chrome:../replyList.svg") !important;
+}
+
+#button-forward,
+.hdrForwardButton {
+    list-style-image: url("chrome:../forwarding.svg") !important;
+}
+
+.delete-button,
+.hdrTrashButton {
+    list-style-image: url("chrome:../delete.svg") !important;
+}
+
+.junk-button,
+.hdrJunkButton {
+    list-style-image: url("chrome:../junk.svg") !important;
+}
+
+#button-print {
+    list-style-image: url("chrome:../print.svg") !important;
+}
+
+#button-stop {
+    list-style-image: url("chrome:../stop.svg") !important;
+}
+
+#button-file {
+    list-style-image: url("chrome:../file.svg") !important;
+}
+
+#button-nextUnread {
+    list-style-image: url("chrome:../nextUnread.svg") !important;
+}
+
+#button-previousUnread {
+    list-style-image: url("chrome:../previousUnread.svg") !important;
+}
+
+#button-mark {
+    list-style-image: url("chrome:../mark.svg") !important;
+}
+
+#button-tag {
+    list-style-image: url("chrome:../tag.svg") !important;
+}
+
+#button-goback {
+    list-style-image: url("chrome:../back.svg") !important;
+}
+
+#button-goforward {
+    list-style-image: url("chrome:../forward.svg") !important;
+}
+
+#button-compact {
+    list-style-image: url("chrome:../compact.svg") !important;
+}
+
+#button-archive,
+.hdrArchiveButton {
+    list-style-image: url("chrome:../archive.svg") !important;
+}
+
+#button-chat {
+    list-style-image: url("chrome:../chat.svg") !important;
+}
+
+#button-nextMsg {
+    list-style-image: url("chrome:../next.svg") !important;
+}
+
+#button-previousMsg {
+    list-style-image: url("chrome:../previous.svg") !important;
+}
+
+#qfb-show-filter-bar,
+#palette-box #qfb-show-filter-bar {
+    list-style-image: url("chrome:../qfb.svg") !important;
+}
+
+#button-showconversation {
+    list-style-image: url("chrome:../conversation.svg") !important;
+}
+
+#button-add-buddy {
+    list-style-image: url("chrome:../Chat_NewContact.svg") !important;
+}
+
+#button-join-chat {
+    list-style-image: url("chrome:../Chat_JoinChat.svg") !important;
+}
+
+#button-chat-accounts {
+    list-style-image: url("chrome:../Chat_ShowAccounts.svg") !important;
+}
+
+#calendar-tab-button,
+#lightning-button-calendar,
+#newMsgButton-calendar-menuitem {
+    list-style-image: url("chrome:../calendar.svg") !important;
+}
+
+#task-tab-button,
+#newMsgButton-task-menuitem {
+    list-style-image: url("chrome:../tasks.svg") !important;
+}
+
+#extractEventButton {
+    list-style-image: url("chrome:../addAsEvent.svg") !important;
+}
+
+#extractTaskButton {
+    list-style-image: url("chrome:../addAsTask.svg") !important;
+}
+
+#appmenu-cut,
+#appmenu-editmenu-menupopup>#appmenu-editmenu-cut {
+    list-style-image: url("chrome:../cut.svg") !important;
+    -moz-image-region: auto;
+}
+
+#appmenu-copy,
+#appmenu-editmenu-menupopup>#appmenu-editmenu-copy {
+    list-style-image: url("chrome:../copy.svg") !important;
+    -moz-image-region: auto;
+}
+
+#appmenu-paste,
+#appmenu-editmenu-menupopup > #appmenu-editmenu-paste {
+    list-style-image: url("chrome:../paste.svg") !important;
+    -moz-image-region: auto;
+}
+
+#appmenuPrimaryPane > #appmenu-quit {
+    list-style-image: url("chrome:../stop.svg") !important;
+    -moz-image-region: auto;
+}
+
+#task-actions-category {
+    list-style-image: url("chrome:../tag.svg") !important;
+}
+
+#task-actions-markcompleted {
+    list-style-image: url("chrome:../accept.svg") !important;
+}
+
+#task-actions-priority {
+    list-style-image: url("chrome:../priority.svg") !important;
+}
+
+#calendar-delete-task-button {
+    list-style-image: url("chrome:../delete.svg") !important;
+}

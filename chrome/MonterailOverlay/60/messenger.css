@@ -1,5 +1,0 @@
-@import url(chrome://MonterailOverlay/skin/css/messenger.css);
-
-.tab-background[selected]:not(:-moz-lwtheme) {
-    background-color: var(--background-color-light) !important;
-}

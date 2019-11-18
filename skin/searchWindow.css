@@ -1,0 +1,806 @@
+/*@import url(chrome://messenger/skin/glodaFacetView.css);*/
+@import url(chrome://MonterailOverlay/skin/root.css);
+
+#main-column, .message, .results-message-header {
+    background: var(--thread-background-color);
+}
+
+.message, .message-body, .message-meta, .message-recipients, .explanation-fulltext-term, .results-message-header, .results-message-count, .bar:hover > .bar-link {
+    color: var(--message-list-text-color);
+}
+
+.message-body-fulltext-match {
+    background-color: rgb(205, 214, 224);
+}
+
+.facets-sidebar {
+    background-color: var(--background-color);
+}
+
+.facets-sidebar h1,
+.facets-sidebar h2,
+.facets-sidebar h3,
+.facets-sidebar h4,
+.bar > .bar-count,
+.facet-checkbox-label, 
+.facet-checkbox-count,
+.bar > .bar-link,
+.bar:hover > .bar-link,
+.message-body,
+.explanation-query-involves,
+.explanation-query-label,
+.message-author,
+.message-recipient,
+.message-to-label,
+.message-attachment,
+.message-recipients-andothers {
+    color: #fff !important;
+}
+
+.message-attachment-icon {
+  fill: #fff !important;
+}
+
+.bar:hover > .bar-link {
+    background: rgba(255,255,255,.1);
+}
+
+.bar:focus, 
+.bar[selected="true"] > .bar-link {
+    background: var(--tree-background-color-selected);
+    border: 0;
+}
+
+facet-popup-menu.popup-menu {
+    background: var(--background-color-light);
+}
+
+.popup-menuitem:hover, 
+.popup-menuitem:focus,
+facet-boolean:not([disabled]):hover > .facet-checkbox-bubble, 
+facet-boolean-filtered:not([disabled]):hover > .facet-checkbox-bubble {
+    color: #fff !important;
+    background: var(--tree-background-color-selected) !important;
+}
+
+/* stop monterail */
+
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+ html {
+    height: 100%;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+  
+  #table {
+    display: table;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  #table>div {
+    display: table-row;
+  }
+  
+  .facets-sidebar {
+    display: table-cell;
+    width: 20em;
+    max-width: 20em;
+    padding: 4px;
+    min-height: 100%;
+    padding-inline-start: 1em;
+    font-size: 90%;
+  }
+  
+  #main-column {
+    padding-inline-start: 1em;
+    display: table-cell;
+  }
+  
+  #header {
+    position: relative;
+    max-width: 40em;
+    display: block;
+  }
+  
+  #data-column {
+    margin-top: 1em;
+    margin-inline-end: 1em;
+    max-width: 40em;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .popup-menu {
+    position: absolute;
+    z-index: 100;
+    overflow: hidden;
+    border: 1px solid var(--popupBorder);
+    background-color: var(--popupColor);
+    box-shadow: 0 0 4px hsla(210, 4%, 10%, .2);
+  }
+  
+  .popup-menuitem {
+    font: menu;
+    padding: 4px 10px;
+  }
+  
+  .popup-menuitem:hover,
+  .popup-menuitem:focus {
+    background-color: var(--popupHLColor);
+    color: var(--popupHLTextColor);
+  }
+  
+  .popup-menu[variety="remainder"] .undo {
+    display: none;
+  }
+  .popup-menu[variety="include"] .top {
+    display: none;
+  }
+  .popup-menu[variety="include"] .bottom {
+    display: none;
+  }
+  .popup-menu[variety="exclude"] .top {
+    display: none;
+  }
+  .popup-menu[variety="exclude"] .bottom {
+    display: none;
+  }
+  
+  .popup-menuitem:focus {
+    cursor: pointer;
+  }
+  
+  .popup-menu[variety="invisible"] {
+    display: none;
+  }
+  
+  /* ===== Query Explanation ===== */
+  
+  #query-explanation {
+    display: block;
+    height: 40px;
+    font-size: 140% !important;
+    padding: 2px;
+    padding-inline-start: 0;
+    padding-top: 1em;
+    padding-inline-end: 80px;
+  }
+  
+  .explanation-fulltext-label,
+  .explanation-fulltext-term {
+    margin: 0 0.1em;
+  }
+  
+  .explanation-fulltext-criteria {
+    color: GrayText;
+    margin: 0 0.1em;
+  }
+  
+  
+  .explanation-query-label {
+    margin-top: 1ex;
+  }
+  
+  .explanation-query-label,
+  .explanation-query-involves,
+  .explanation-query-tagged {
+    margin-inline-end: 0.5ex;
+  }
+  
+  /* ===== Facets ===== */
+  
+  h1, h2, h3 {
+    cursor: default;
+  }
+  
+  #filter-header-label {
+    margin: 0;
+    margin-top: 1em;
+  }
+  
+  .facetious[uninitialized] {
+    display: none !important;
+  }
+  
+  .facetious {
+    display: list-item; /* take the whole column width */
+    list-style: none;
+    padding: 2px;
+  }
+  
+  h1 {
+    font-size: medium !important;
+    padding-bottom: 0.5em;
+  }
+  
+  h2 {
+    display: block;
+    margin: 0;
+    font-size: 100%;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+  
+  .facet > h3,
+  .facet-content > h3 {
+    font-size: 90%;
+    padding-inline-start: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .facet-included-header[state="empty"],
+  .facet-excluded-header[state="empty"],
+  .facet-remaindered-header[needed="false"] {
+    display: none;
+  }
+  
+  .facet-included-header[state="empty"] + .facet-included,
+  .facet-excluded-header[state="empty"] + .facet-excluded,
+  .facet-remaindered:empty {
+    display: none;
+  }
+  
+  .facet-excluded > .bar > .bar-link {
+    text-decoration: line-through; /* strike the names of excluded facets */
+  }
+  
+  .date-wrapper {
+    position: relative;
+    height: 80px;
+    display: block;
+    padding: 0;
+    padding-top: 0.5em;
+    margin-inline-end: 1em;
+    padding-inline-start: 2em;
+    padding-bottom: 1em;
+  }
+  
+  #date-toggle {
+    position: absolute;
+    right: 1em;
+    bottom: 0;
+    margin: 5px;
+    font-size: 90%;
+    text-align: end;
+    display: none;
+    width: 46px !important;
+    height: 17px !important;
+    margin-inline-end: 2px;
+    margin-top: 2px;
+    padding: 4px;
+    background-image: url("chrome://messenger/skin/icons/timeline.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: var(--borderRadius);
+    -moz-context-properties: fill;
+    fill: Highlight;
+  }
+  
+  html[dir="rtl"] #date-toggle {
+    right: auto;
+    left: 1em;
+  }
+  
+  #date-toggle:hover {
+    background-color: Highlight;
+    fill: HighlightText;
+  }
+  
+  
+  .facet-date-zoom-out {
+    position: absolute;
+    top: -18px;
+    left: 0;
+    width: 24px !important;
+    height: 24px !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: var(--borderRadius);
+  }
+  
+  html[dir="rtl"] .facet-date-zoom-out {
+    left: auto;
+    right: 0;
+  }
+  
+  .facetious[type="date"][zoomedout="false"] .facet-date-zoom-out {
+    background-image: url("chrome://messenger/skin/icons/zoomout.png");
+    background-color: #babdb6;
+    cursor: pointer;
+  }
+  
+  .facetious[type="date"][zoomedout="false"] .facet-date-zoom-out:hover {
+    background-image: url("chrome://messenger/skin/icons/zoomout-hover.png");
+    background-color: #729fcf;
+  }
+  
+  .date-vis-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  html[dir="rtl"] .date-vis-frame {
+    left: auto;
+    right: 0;
+  }
+  
+  /* === Boolean Facet === */
+  
+  #facet-fromMe, #facet-toMe, #facet-star, #facet-attachmentTypes {
+    display: inline-block; /* override the general .facetious list-item style */
+  }
+  
+  /* special case: hide these two facets when they don't match */
+  #facet-star[disabled], #facet-attachmentTypes[disabled] {
+    display: none;
+  }
+  
+  .facet-checkbox-bubble {
+    display: inline-flex;
+    padding: 2px;
+    padding-inline-end: 6px;
+    border-radius: var(--borderRadius);
+    cursor: pointer;
+    font-size: 90%;
+  }
+  
+  facet-boolean[disabled] {
+    opacity: 0.6;
+  }
+  
+  facet-boolean[disabled] > .facet-checkbox-bubble,
+  facet-boolean-filtered[disabled] > .facet-checkbox-bubble {
+    cursor: default;
+  }
+  
+  facet-boolean:not([disabled]):hover > .facet-checkbox-bubble,
+  facet-boolean-filtered:not([disabled]):hover > .facet-checkbox-bubble {
+    background-color: Highlight;
+    color: HighlightText;
+  }
+  
+  .facet-checkbox-label,
+  .facet-checkbox-count {
+    margin: 3px;
+  }
+  
+  .facetious:not(:hover) > .facet-checkbox-count {
+    color: GrayText;
+  }
+  .facet-checkbox-count:empty {
+    display: none;
+  }
+  .facet-checkbox-count:before {
+    content: "(";
+  }
+  .facet-checkbox-count:after {
+    content: ")";
+  }
+  
+  /* === Boolean Filtered === */
+  
+  facet-boolean-filtered:not([checked]) > .facet-filter-list {
+    display: none
+  }
+  
+  .facet-filter-list {
+    display: block;
+  }
+  
+  /* === Discrete Facet === */
+  
+  .facet-content {
+    max-height: 32em;
+    overflow: auto;
+  }
+  
+  .facet-more {
+    display: none;
+    -moz-appearance: button;
+    margin: 1px;
+    margin-top: 0.5em;
+    padding: 0.2em 1em;
+    font-size: 85%;
+    cursor: pointer;
+  }
+  
+  .facet-more[needed="true"] {
+    display: inline-block;
+  }
+  
+  .bar {
+    display: block;
+  }
+  
+  html[dir="rtl"] .bar-count {
+    right: auto;
+    left: 3px;
+  }
+  
+  .barry {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .bar {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 80%;
+  }
+  
+  .bar:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .bar[selected="true"] {
+    background-color: Highlight;
+    color: HighlightText;
+  }
+  
+  .bar:focus {
+    background-color: Highlight;
+    outline: none;
+  }
+  
+  .bar-link {
+    display: inline-block;
+    text-decoration: none;
+    display: block;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    padding-inline-start: 0.5em;
+    padding-inline-end: 4em;
+    position: relative;
+    z-index: 2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .bar-count {
+    position: absolute;
+    right: 3px;
+    margin-inline-end: 1.5em;
+    line-height: 1.6em;
+    color: GrayText;
+  }
+  
+  html[dir="rtl"] .bar-link {
+    padding: 0.3em 0.5em 0.3em 2em;
+  }
+  
+  .bar:hover > .bar-link {
+    color: GrayText;
+  }
+  
+  .bar:focus > .bar-count {
+    color: HighlightText;
+  }
+  .bar[selected="true"]> .bar-link {
+    color: HighlightText;
+  }
+  .bar[selected="true"] > .bar-count {
+    color: HighlightText;
+  }
+  
+  /* ===== Results ===== */
+  
+  .results-message-header {
+    display: none; /* $('.results-message-header').show() is run if there are results */
+    width: 100%;
+    background-color: rgba(0,0,0,0.1);
+    border-top: 2px solid GrayText;
+    padding: 2px;
+    margin-bottom: 0.5em;
+  }
+  
+  #results[state="some"] .results-message-header {
+    display: table;
+  }
+  
+  .results-message-count {
+    display: table-cell;
+    margin: 0;
+    padding-inline-start: 2px;
+    font-weight: normal;
+    font-size: small;
+  }
+  
+  .results-message-showall {
+    display: table-cell;
+  }
+  
+  .results-message-showall-button {
+    padding: 0.2em 1em;
+    font-size: small;
+    border-radius: var(--borderRadius);
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .results-message-showall-button:hover,
+  .results-message-showall-button:focus {
+    background-color: var(--buttonHoverColor);
+    color: var(--buttonHoverTextColor);
+    text-decoration: none;
+  }
+  
+  
+  .results-message-sort-bar {
+    display: table-cell;
+    padding-inline-end: 2px;
+    text-align: end;
+    font-size: small;
+  }
+  
+  .results-message-sort-label {
+    color: grey;
+  }
+  
+  .results-message-sort-value {
+    border-radius: var(--borderRadius);
+    padding: 0.2em;
+  }
+  
+  .results-message-sort-value:hover,
+  .results-message-sort-value:focus {
+    background-color: var(--buttonHoverColor);
+    color: var(--buttonHoverTextColor);
+    cursor: pointer;
+  }
+  
+  .results-message-sort-value[selected="true"] {
+    font-weight: bold;
+  }
+  
+  .results-message-sort-value[selected="true"]:hover,
+  .results-message-sort-value[selected="true"]:focus {
+    cursor: default;
+    background-color: transparent;
+    color: inherit;
+  }
+  
+  /* ===== Messages ===== */
+  
+  .message {
+    display: block;
+    font-family: sans-serif;
+    font-size: small;
+    padding: 3px 5px;
+    border: 1px solid transparent;
+    border-bottom-color: lightgrey;
+    border-radius: var(--borderRadius);
+    color: -moz-DialogText;
+    overflow: hidden;
+  }
+  .message:not(:first-child) {
+    border-top-style: none;
+  }
+  .message:last-child {
+    border-bottom-color: transparent;
+  }
+  
+  .message:hover {
+    border-color: lightgrey;
+    box-shadow: 0 0 1px lightgrey inset, 0 0 1px lightgrey inset, 0 0 1px lightgrey inset;
+  }
+  
+  .message:hover .message-subject {
+    color: Highlight;
+  }
+  
+  .message .message-subject:hover,
+  .message .message-subject:focus {
+    background-color: Highlight;
+    color: Highlighttext;
+  }
+  
+  .message:focus,
+  .message[unread="true"]:focus {
+    border: 1px dotted lightgrey;
+    padding: 1em 0;
+  }
+  
+  .message-header {
+    margin-bottom: 0.5em;
+  }
+  .message-meta {
+    float: right;
+    padding-inline-start: 2em;
+    text-align: end;
+    max-width: 20em;
+    max-height: 10em;
+    overflow: hidden;
+    color: GrayText;
+  }
+  
+  html[dir="rtl"] .message-meta {
+    float: left;
+  }
+  
+  .message-attachments {
+    text-align: end;
+    overflow: hidden;
+  }
+  
+  .message-attachment {
+    max-width: 20em;
+    text-align: start;
+    display: inline-block;
+    white-space: nowrap;
+    padding-inline-start: 1ex;
+  }
+  
+  .message-attachment:after {
+    content: ", ";
+  }
+  .message-attachment:last-child:after {
+    content: "";
+  }
+  
+  
+  .message-attachment-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("chrome://messenger/skin/icons/attach.svg") transparent no-repeat center right;
+    -moz-context-properties: fill;
+    fill: currentColor;
+  }
+  
+  html[dir="rtl"] .message-attachment-icon {
+    background-position: center left;
+  }
+  
+  .message-line {
+    position: relative;
+  }
+  
+  .message-addresses-group {
+    text-align: end;
+  }
+  
+  .message-star[starred="true"] {
+    display: inline-block;
+    width: 12px !important;
+    height: 12px;
+    background-image: url("chrome://messenger/skin/icons/flag-col.png");
+  }
+  
+  .message-addresses-group {
+    padding-inline-start: 1em;
+  }
+  
+  .message-subject-group {
+    padding-inline-start: 2px; /* to line up the subjects with the "Top N messages out of M" */
+  }
+  
+  .message-author, .message-recipients {
+    text-align: end;
+    display: inline;
+    color: -moz-DialogText;
+  }
+  
+  .message-subject {
+    color: -moz-NativehyperlinkText;
+    font-size: medium;
+  }
+  
+  .message-subject:hover {
+    cursor: pointer;
+  }
+  
+  .message-body {
+    color: -moz-DialogText;
+    margin-inline-start: 1em;
+    font-family: monospace;
+    font-size: medium;
+    white-space: pre-wrap;
+  }
+  
+  .message-body-fulltext-match {
+    color: HighlightText;
+    background-color: Highlight;
+    border-radius: var(--borderRadius);
+  }
+  
+  .message-recipients-group {
+    margin-inline-start: 0.5em;
+    font-size: small;
+  }
+  
+  .message-tag {
+    display: inline-block; /* to avoid splitting 'To' and 'Do' e.g. */
+    margin-inline-start: 0;
+    margin-inline-end: 3px;
+    padding: 0 0.5ex;
+    background-image: linear-gradient(rgba(255,255,255,0.35),
+                                      rgba(255,255,255,0.35));
+    border-radius: var(--borderRadius);
+    border-style: outset;
+    border-width: 0.5px;
+    text-shadow: 0 1px 0 rgba(238,238,236,0.4); /* Tango Alumninum 1 */
+  }
+  
+  .show-more {
+    display: none; /* $('.show-more').show() is run if there are results */
+    -moz-appearance: button;
+    float: right;
+    padding: 0.2em 1em;
+    font-size: small;
+    margin-top: 5px;
+    margin-inline-end: 1em;
+    margin-bottom: 2em;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+  
+  html[dir="rtl"] .show-more {
+    float: left;
+  }
+  
+  div.loading,
+  div.empty {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  span.loading,
+  span.empty {
+    color: ButtonText;
+    background-color: ButtonFace;
+    border: 1px outset ThreeDShadow;
+    border-radius: var(--borderRadius);
+  }
+  
+  img.loading,
+  img.empty {
+    margin: 0 1ex;
+    padding: 0;
+    border: none;
+    vertical-align: middle;
+  }
+  
+  html[dir="rtl"] img.empty {
+    transform: scaleX(-1);
+  }
+  
+  div.empty {
+    display: none;
+  }
+  
+  span.empty {
+    background-color: inherit;
+    border: none;
+    font-size: large;
+    color: #729fcf;
+  }
+  
+  #facet-date {
+    max-height: 104px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    overflow: visible;
+    transition: all .2s;
+    /* Put facet-date at the top */
+    order: -1;
+  }
+  
+  #facet-date[hide="true"] {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  

@@ -1,0 +1,43 @@
+#button-send {
+    list-style-image: url("chrome:../Composer_Send_Light.svg") !important;
+}
+
+#button-contacts {
+    list-style-image: url("chrome:../Composer_Contacts_Light.svg") !important;
+}
+
+#spellingButton {
+    list-style-image: url("chrome:../Composer_Spelling_Light.svg") !important;
+}
+
+#button-attach {
+    list-style-image: url("chrome:../Composer_Attach_Light.svg") !important;
+}
+
+#button-security {
+    list-style-image: url("chrome:../Composer_Security_Light.svg") !important;
+}
+
+#button-save {
+    list-style-image: url("chrome:../save_light.svg") !important;
+}
+
+#quoteButton {
+    list-style-image: url("chrome:../Composer_Quote_Light.svg") !important;
+}
+
+#cut-button {
+    list-style-image: url("chrome:../cut_light.svg") !important;
+}
+
+#copy-button {
+    list-style-image: url("chrome:../copy_light.svg") !important;
+}
+
+#paste-button {
+    list-style-image: url("chrome:../paste_light.svg") !important;
+}
+
+#button-print {
+    list-style-image: url("chrome:../print_light.svg") !important;
+}

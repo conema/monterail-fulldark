@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay >
+<?xml-stylesheet href="chrome://MonterailOverlay-OS/skin/messenger.css" type="text/css"?>
+<?xml-stylesheet href="chrome://MonterailOverlay/skin/messenger.css" type="text/css"?>
+
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/javascript" src="chrome://global/content/globalOverlay.js"/>
+
+</overlay>

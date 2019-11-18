@@ -1,0 +1,80 @@
+@import url(chrome://MonterailOverlay-OS/skin/addressbook.css);
+@import url(chrome://MonterailOverlay/skin/root.css);
+@import url(chrome://MonterailOverlay/skin/icons/css/adressbook.css);
+
+#dirTree > treechildren {
+   --treechildren-selectedBackground: rgba(255,255,255,.2);
+   --treechildren-selectedFocusBackground: rgba(255,255,255,.3);
+   --treechildren-selectedFocusCurrentBackground: rgba(255,255,255,.35);
+   --treechildren-hoverBackground: rgba(255,255,255,.1);
+   --treechildren-hoverCurrentBackground: rgba(255,255,255,.3);
+   --treechildren-hoverSelectedBackground: rgba(255,255,255,.35);
+}
+  
+#abResultsTree > treechildren {
+   --treechildren-selectedBackground: var(--tree-background-color-selected);
+   --treechildren-selectedFocusBackground: var(--tree-background-color-selected);
+   --treechildren-selectedFocusCurrentBackground: var(--tree-background-color-selected);
+   --treechildren-hoverBackground: var(--tree-background-color-hover);
+   --treechildren-hoverCurrentBackground: var(--tree-background-color-hover);
+   --treechildren-hoverSelectedBackground: var(--tree-background-color-selected);
+}
+
+#ab-toolbox>#addrbook-toolbar-menubar2,
+#ab-toolbox>#ab-bar2 {
+    color: var(--message-list-text-color);
+    background-color: #fff;
+}
+
+.toolbarbutton-1 {
+    -moz-context-properties: fill;
+}
+
+.toolbarbutton-1,
+.toolbarbutton-menubutton-button {
+    color: #666;
+    fill: #666;
+}
+
+toolbar[brighttext]>.toolbarbutton-1 {
+    fill: #fff;
+}
+
+.toolbarbutton-1:-moz-window-inactive .toolbarbutton-icon,
+.toolbarbutton-1:-moz-window-inactive>.toolbarbutton-text,
+.toolbarbutton-menubutton-button:-moz-window-inactive>.toolbarbutton-icon,
+.toolbarbutton-menubutton-button:-moz-window-inactive>.toolbarbutton-text {
+    opacity: 0.5;
+}
+
+.toolbarbutton-menubutton-button>.toolbarbutton-icon,
+.toolbarbutton-1 .toolbarbutton-icon {
+    width: 16px !important;
+    height: 16px !important;
+    margin: 1px !important;
+}
+
+#dirTreeBox>#dirTree {
+    background-color: var(--background-color);
+}
+
+#dirTreeBox>#dirTree:-moz-window-inactive {
+    background-color: var(--background-color-inactive);
+}
+
+#abResultsTree {
+    background-color: #fff;
+}
+
+#abResultsTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected),
+#abResultsTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus),
+#dirTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text,
+#dirTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus) {
+    color: #fff;
+}
+
+#dirTree>treechildren::-moz-tree-image,
+#abResultsTree>treechildren::-moz-tree-image {
+    width: 14px;
+    height: 14px;
+}

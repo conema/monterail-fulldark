@@ -1,0 +1,63 @@
+#dirTree>treechildren::-moz-tree-image(DirCol) {
+    list-style-image: url("chrome:../abook.svg") !important;
+}
+
+#dirTree>treechildren::-moz-tree-image(DirCol, IsMailList-true) {
+    list-style-image: url("chrome:../maillist.svg") !important;
+}
+
+/* ::::: twisty :::::  */
+
+#dirTree>treechildren::-moz-tree-twisty {
+    -moz-appearance: none;
+    padding-inline-start: 5px;
+    padding-inline-end: 5px;
+    padding-top: 1px;
+    width: 9px;
+    list-style-image: url("chrome:../twisty.svg") !important;
+}
+
+#dirTree>treechildren::-moz-tree-twisty(open) {
+    -moz-appearance: none;
+    list-style-image: url("chrome:../twisty-open.svg") !important;
+}
+
+#abResultsTree>treechildren::-moz-tree-image(GeneratedName) {
+    list-style-image: url("chrome:../contact.svg") !important;
+}
+
+#abResultsTree>treechildren::-moz-tree-image(GeneratedName, selected) {
+    list-style-image: url("chrome:../contact-selected.svg") !important;
+}
+
+#abResultsTree>treechildren::-moz-tree-image(GeneratedName, MailList) {
+    list-style-image: url("chrome:../contacts.svg") !important;
+}
+
+#abResultsTree>treechildren::-moz-tree-image(GeneratedName, MailList, selected) {
+    list-style-image: url("chrome:../contacts-selected.svg") !important;
+}
+
+#button-newcard {
+    list-style-image: url("chrome:../AB_New_Contact.svg") !important;
+}
+
+#button-newlist {
+    list-style-image: url("chrome:../AB_New_List.svg") !important;
+}
+
+#button-editcard {
+    list-style-image: url("chrome:../AB_Edit_Contact.svg") !important;
+}
+
+#button-newmessage {
+    list-style-image: url("chrome:../newmsg.svg") !important;
+}
+
+#button-newim {
+    list-style-image: url("chrome:../chat.svg") !important;
+}
+
+#button-abdelete {
+    list-style-image: url("chrome:../delete.svg") !important;
+}

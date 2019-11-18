@@ -1,0 +1,96 @@
+#ab-toolbox > #addrbook-toolbar-menubar2 {
+  -moz-appearance: none;
+}
+
+#ab-toolbox > #addrbook-toolbar-menubar2:not(:-moz-window-inactive) {
+  color: #fff;
+  background-color: var(--background-color);
+}
+
+#ab-toolbox > #addrbook-toolbar-menubar2:-moz-window-inactive {
+  color: #ddd;
+  background-color: var(--background-color-inactive);
+}
+
+#mail-menubar,
+#mail-menubar > menu {
+  -moz-appearance: none;
+  color: inherit;
+}
+
+#dirTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(odd) {
+  background-color: initial;
+}
+
+#dirTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
+  background-color: rgba(255,255,255,.2);
+}
+
+#dirTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, focus) {
+  background-color: rgba(255,255,255,.3);
+}
+
+#dirTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(current, focus) {
+  background-color: rgba(255,255,255,.35);
+  border-color: transparent;
+}
+
+#dirTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
+  background-color: rgba(255,255,255,.1);
+}
+
+#dirTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, current) {
+  background-color: rgba(255,255,255,.3);
+}
+
+#dirTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, selected) {
+  background-color: rgba(255,255,255,.35);
+}
+
+#dirTree > treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text,
+#dirTree > treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus) {
+  color: #ddd;
+}
+
+#abResultsTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(odd) {
+  background-color: initial;
+}
+
+#abResultsTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected) {
+  background-color: var(--tree-background-color-selected);
+}
+
+#abResultsTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(selected, focus) {
+  background-color: var(--tree-background-color-selected);
+  opacity: 0.7;
+}
+
+#abResultsTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(current, focus) {
+  background-color: transparent;
+  border-color: var(--tree-background-color-selected);
+  border-style: solid;
+}
+
+#abResultsTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(current, selected, focus) {
+  background-color: var(--tree-background-color-selected);
+  border-color: transparent;
+}
+
+#abResultsTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover) {
+  background-color: var(--tree-background-color-hover);
+  opacity: 0.3;
+}
+
+#abResultsTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, current) {
+  background-color: var(--tree-background-color-hover);
+  opacity: 0.7;
+}
+
+#abResultsTree > treechildren:not(.autocomplete-treebody)::-moz-tree-row(hover, selected) {
+  background-color: var(--tree-background-color-selected);
+}
+
+#abResultsTree > treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected),
+#dirTree > treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus) {
+  color: #fff;
+}

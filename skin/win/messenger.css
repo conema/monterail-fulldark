@@ -1,0 +1,116 @@
+#folderTree > treechildren {
+  --treechildren-outline: none;
+  --treechildren-selectedColor: transparent;
+  --treechildren-2ndBorderColor: transparent;
+  --treechildren-focusColor: transparent;
+  --treechildren-selectedFocusColor: transparent;
+  --treechildren-currentColor: transparent;
+  --treechildren-hoverColor: transparent;
+  --treechildren-selectedBorder: transparent;
+  --treechildren-selectedBottomBorder: transparent;
+  --treechildren-selectedImage:  var(--tree-background-color-selected);
+  --treechildren-selectedBackground: transparent;
+  --treechildren-currentFocusBorder: var(--tree-background-color-selected);
+  --treechildren-currentFocusBottomBorder: var(--tree-background-color-selected);
+  --treechildren-selectedFocusBorder: transparent;
+  --treechildren-selectedFocusBottomBorder: transparent;
+  --treechildren-selectedFocusImage:  var(--tree-background-color-selected);
+  --treechildren-selectedFocusBackground: transparent;
+  --treechildren-selectedFocusCurrentBorder: transparent;
+  --treechildren-selectedFocusCurrentBottomBorder: transparent;
+  --treechildren-selectedFocusCurrentImage:  var(--tree-background-color-selected);
+  --treechildren-hoverBorder: transparent;
+  --treechildren-hoverBottomBorder: transparent;
+  --treechildren-hoverImage: linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.1));
+  --treechildren-hoverCurrentBorder: transparent;
+  --treechildren-hoverCurrentBottomBorder: transparent;
+  --treechildren-hoverCurrentImage: linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,.3));
+  --treechildren-hoverSelectedBorder: transparent;
+  --treechildren-hoverSelectedBottomBorder: transparent;
+  --treechildren-hoverSelectedImage: linear-gradient(var(--tree-background-color-selected), var(--tree-background-color-selected));
+}
+
+#threadTree > treechildren {
+  --treechildren-outline: none;
+  --treechildren-selectedColor: transparent;
+  --treechildren-2ndBorderColor: transparent;
+  --treechildren-focusColor: transparent;
+  --treechildren-selectedFocusColor: transparent;
+  --treechildren-currentColor: transparent;
+  --treechildren-hoverColor: transparent;
+  --treechildren-selectedBorder: transparent;
+  --treechildren-selectedBottomBorder: transparent;
+  --treechildren-selectedImage:  var(--tree-background-color-selected);
+  --treechildren-selectedBackground: transparent;
+  --treechildren-currentFocusBorder: var(--tree-background-color-selected);
+  --treechildren-currentFocusBottomBorder: var(--tree-background-color-selected);
+  --treechildren-selectedFocusBorder: transparent;
+  --treechildren-selectedFocusBottomBorder: transparent;
+  --treechildren-selectedFocusImage:  var(--tree-background-color-selected);
+  --treechildren-selectedFocusBackground: transparent;
+  --treechildren-selectedFocusCurrentBorder: transparent;
+  --treechildren-selectedFocusCurrentBottomBorder: transparent;
+  --treechildren-selectedFocusCurrentImage:  var(--tree-background-color-selected);
+  --treechildren-hoverBorder: transparent;
+  --treechildren-hoverBottomBorder: transparent;
+  --treechildren-hoverImage: linear-gradient(var(--tree-background-color-hover), var(--tree-background-color-hover));
+  --treechildren-hoverCurrentBorder: transparent;
+  --treechildren-hoverCurrentBottomBorder: transparent;
+  --treechildren-hoverCurrentImage: linear-gradient(var(--tree-background-color-hover), var(--tree-background-color-hover));
+  --treechildren-hoverSelectedBorder: transparent;
+  --treechildren-hoverSelectedBottomBorder: transparent;
+  --treechildren-hoverSelectedImage: var(--tree-background-color-selected);
+}
+
+#titlebar-min,
+#titlebar-max,
+#titlebar-close {
+  -moz-context-properties: stroke;
+  stroke: #fff;
+}
+
+@media (-moz-windows-default-theme) {
+  #folderPaneBox > #folderTree {
+    border-bottom: none;
+    border-inline-end: none;
+  }
+
+  #folderPaneBox > #folderTree treechildren::-moz-tree-cell(dropOn) {
+    background-image: none;
+    background-color: rgba(255, 255, 255, .3);
+    border-style: none;
+  }
+
+  #folderPaneBox > #folderTree treechildren::-moz-tree-cell-text(dropOn) {
+    color: #fff;
+  }
+}
+
+#messengerWindow > #navigation-toolbox > #tabs-toolbar {
+  -moz-box-ordinal-group: 20;
+}
+
+#messengerWindow[tabsintitlebar][sizemode="normal"] > #navigation-toolbox > #mail-toolbar-menubar2:not([autohide=true]) + #tabs-toolbar,
+#messengerWindow[tabsintitlebar][sizemode="normal"] > #navigation-toolbox > #mail-toolbar-menubar2[autohide=true]:not([inactive]) + #tabs-toolbar {
+  margin-top: 0 !important;
+}
+
+#messengerWindow > #navigation-toolbox > #mail-toolbar-menubar2 {
+  -moz-box-ordinal-group: 10;
+  -moz-window-dragging: default;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none;
+  padding-bottom: 0 !important;
+  padding-top: 0;
+}
+
+#messengerWindow > #navigation-toolbox > #mail-toolbar-menubar2 {
+  color: inherit;
+  background-color: transparent;
+  border-bottom-width: 0;
+}
+
+#navigation-toolbox > #mail-toolbar-menubar2:-moz-lwtheme {
+  background-image: none;
+}
