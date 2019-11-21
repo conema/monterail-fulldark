@@ -4,11 +4,6 @@
 @import url(chrome://MonterailOverlay-OS/skin/messenger.css);
 @import url(chrome://MonterailOverlay/skin/root.css);
 
-#threadTree > treechildren::-moz-tree-cell-text,
-#threadCols {
-    color: #fff !important;
-}
-
 #tabbar-toolbar .toolbarbutton-icon,
 #header-view-toolbox .toolbarbutton-icon {
     fill: #fff;
@@ -217,6 +212,12 @@ toolbar[brighttext]>.toolbarbutton-1 {
 #threadTree treechildren::-moz-tree-row(container) {
     background-color: var(--thread-background-color);
 }
+
+#threadTree > treechildren::-moz-tree-cell-text(untagged),
+#threadCols {
+    color: #fff !important;
+}
+
 
 #threadTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected),
 #threadTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus),

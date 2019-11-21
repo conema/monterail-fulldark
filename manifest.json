@@ -10,7 +10,7 @@
   },
   "applications": {
     "gecko": {
-      "id": "MonterailFullDark@conema.me",
+      "id": "MonterailFullDark2@conema.me",
       "strict_min_version": "68.0"
     }
   },
