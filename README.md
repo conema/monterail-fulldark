@@ -16,7 +16,8 @@ This is a full theme for the Thunderbird e-mail client, inspired by [Monterail](
 The first step is to [download](https://github.com/conema/monterail-fulldark/archive/master.zip) the theme, unzip the contents and re-create a zip only with the content of "monterail-fulldark" folder. Change the extension of the archive to ".xpi". An extensive guide for install the xpi file can be found [here](https://support.mozilla.org/en-US/kb/installing-addon-thunderbird) on the Mozilla support site, starting from "A slightly less ideal case". The Addon Manager can be found by clicking the menu icon ![menu](https://prod-cdn.sumo.mozilla.net/uploads/gallery/images/2017-10-22-15-37-15-18c775.png) (on the right, next to the search bar) followed by Add-ons and click on the Themes panel on the left.
 
 ### Theme market (**recommended procedure**)
-The theme can be directly downloaded from the Thunderbird Add-on market, it can be found by searching "Monterail Full Dark" directly in the add-on page of thunderbird or [there](https://addons.thunderbird.net/en-US/thunderbird/addon/monterail-fulldark/).
+The theme can be directly downloaded from the Thunderbird Add-on market, the old version can be found by searching "Monterail Full Dark" directly in the add-on page of thunderbird or [there](https://addons.thunderbird.net/en-US/thunderbird/addon/monterail-fulldark/), the new version can be found by searching "Monterail Full Dark 2.0 for TB>68" directly in the add-on page of thunderbird or [there](https://addons.thunderbird.net/en-US/thunderbird/addon/monterail-full-dark-2/).
+
 
 ## Screenshots
 ![screen1](https://user-images.githubusercontent.com/12801153/44424482-837e5f80-a589-11e8-9410-d8d3a538d755.jpg)
