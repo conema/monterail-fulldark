@@ -4,12 +4,12 @@ _Monterail Full Dark, a Thunderbird theme inspired by the mockup of Monterail_
 ## Another version: [Monterail Dark](https://github.com/conema/monterail-dark)
 
 ## Thunderbird v68
-Unfortunately this version of Thundebird (v68) broke this and a lot more of themes and unfortunately it is not easy, nor possible, to update and adjust this theme at this moment, because the so called "full themes" are no more supported.
+WARNING: the last version is only compatible with Thunderbird 78.x
 
 **For this reason the theme is been converted to a legacy extension**, and for now it's working.
 
 ## What is this?
-This is a full theme for the Thunderbird e-mail client, inspired by [Monterail](https://monterail.com/blog/2016/the-power-of-email-clients-why-did-we-redesign-thunderbird) mockup and by [spymastermatt](https://github.com/spymastermatt/thunderbird-monterail)'s dark theme. As opposed to the spymastermatt's version, this theme can be **installed easily and quickly with an addon** and it's **compatible with Thunderbird 60.x and 68**.
+This is a full theme for the Thunderbird e-mail client, inspired by [Monterail](https://monterail.com/blog/2016/the-power-of-email-clients-why-did-we-redesign-thunderbird) mockup and by [spymastermatt](https://github.com/spymastermatt/thunderbird-monterail)'s dark theme. As opposed to the spymastermatt's version, this theme can be **installed easily and quickly with an addon** and it's **compatible with Thunderbird 60.x and 78**. The previously versions are compatible also with Thunderbird 68.
 
 ## Installation
 ### Manual (from source)
@@ -45,7 +45,10 @@ Yes. Currently the theme has been tested only on Windows 10 and openSUSE. You ar
 
 * With which versions of Thunderbird can I use this theme?
 
-Version **[1.1.6](https://github.com/conema/monterail-fulldark/releases/tag/1.1.6)** works with Thunderbird **<=60.x**. The latest versions (>=2.0) works only with Thunderbird **>=68**.
+Version **[1.1.6](https://github.com/conema/monterail-fulldark/releases/tag/1.1.6)** works with Thunderbird **<=60.x**. Version **[2.1](https://github.com/conema/monterail-fulldark/releases/tag/2.1)** works only with Thunderbird **68**. The last versions works with Thunderbird **78**.
+
+
+
 
 
 ## Credits
