@@ -11,7 +11,8 @@
 
 #titlebar:not(:-moz-window-inactive),
 #navigation-toolbox > #tabs-toolbar:not(:-moz-window-inactive),
-#navigation-toolbox > #mail-toolbar-menubar2:not(:-moz-window-inactive) {
+#navigation-toolbox > #mail-toolbar-menubar2:not(:-moz-window-inactive),
+#tabs-toolbar {
   color: #fff;
   background-color: var(--background-color) !important;
 }
@@ -115,7 +116,8 @@
 }
 
 #event-filter-menulist {
-    background-image: linear-gradient(0, var(--background-color-light), var(--background-color-light)) !important;
+    
+background-image: linear-gradient(0, var(--background-color-light), var(--background-color-light)) !important;
 }
 
 #calendar-status-todaypane-button {
