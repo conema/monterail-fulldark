@@ -1,8 +1,7 @@
 /* :::: Credit where credit is due :::: */
 /* Sharebird: light-weight theme idea */
 
-@import url(chrome://MonterailOverlay-OS/skin/messenger.css);
-@import url(chrome://MonterailOverlay/skin/root.css);
+@import url(chrome://MonterailOverlay/content/skin/root.css);
 
 #tabbar-toolbar .toolbarbutton-icon,
 #header-view-toolbox .toolbarbutton-icon {
@@ -589,7 +588,8 @@ calendar-day-label[relation="today1day"],
 calendar-day-label[orient][relation="today"],
 .calendar-month-day-box-day-off .calendar-month-day-box-date-label,
 .minimonth-month-box,
-#today-pane-panel > sidebarheader {
+#today-pane-panel > sidebarheader,
+calendar-minimonth {
     background: var(--background-color-light) !important;
 }
 
@@ -603,11 +603,16 @@ calendar-header-container:not([rotated]) {
     border-bottom: none;
 }
 
+.minimonth-day:not([today="true"]):not([selected="true"]) {
+    background: var(--background-color) !important;
+    color: #fff !important;
+    border-color: var(--background-color-light) !important;
+}
+
 .minimonth-day[selected="true"], 
 .minimonth-day[interactive]:hover,
 #calendar-nav-control,
 minimonth-month-box,
-.minimonth-month-name,
 #calendar-nav-control .navigation-spacer-box,
 #calendar-nav-control .navigation-bottombox {
     background-color: var(--tree-background-color-selected);
@@ -617,18 +622,14 @@ minimonth-day[today="true"] {
     background: var(--background-color-light) !important;
 }
 
-.minimonth-day {
-    background: var(--background-color) !important;
-    color: #fff !important;
-    border-color: var(--background-color-light) !important;
-}
-
 .minimonth-day[othermonth="true"] {
     opacity: 0.8;
 }
 
 .minimonth-month-name .toolbarbutton-text,
-.minimonth-year-name {
+.minimonth-year-name,
+.minimonth-month-name,
+.minimonth-day[selected="true"] {
     color: #fff;
     font-weight: normal;
 }
@@ -725,4 +726,36 @@ calendar-event-column[orient="vertical"],
 #unifinder-search-results-tree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected), 
 #unifinder-search-results-tree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus) {
     color: #fff !important;
+}
+
+#titlebar-min, #titlebar-max, #titlebar-close {
+    color: #fff;
+}
+
+.panel-header, .panel-subview-body, .subviewbutton  {
+    background-color: var(--background-color);
+    color: #fff;
+}
+
+/*   customize toolbar */
+#main-box { 
+    background: var(--background-color);
+}
+
+toolbarpaletteitem,
+menulist menupopup menuitem,
+#modelistLabel,
+#donebutton .button-text,
+#restoreDefault .button-text,
+#instructions,
+menulist menupopup > menuitem:not([disabled="true"])[_moz-menuactive="true"] {
+    color: #fff;
+}
+
+#modelist {
+    color: #fff !important;
+}
+
+#modelistpopup {
+    background-color: #3d4145;
 }

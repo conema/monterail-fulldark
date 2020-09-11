@@ -1,5 +1,5 @@
 /*@import url(chrome://messenger/skin/glodaFacetView.css);*/
-@import url(chrome://MonterailOverlay/skin/root.css);
+@import url(chrome://MonterailOverlay/content/skin/root.css);
 
 #main-column, .message, .results-message-header {
     background: var(--thread-background-color);

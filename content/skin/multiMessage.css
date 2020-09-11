@@ -1,6 +1,4 @@
-@import url("chrome://messenger/content/multimessageview.css");
-@import url(chrome://MonterailOverlay-OS/skin/multiMessage.css);
-@import url(chrome://MonterailOverlay/skin/root.css);
+@import url(chrome://MonterailOverlay/content/skin/root.css);
 
 #heading_wrapper {
   color: #fff;
@@ -19,9 +17,9 @@
 }
 
 #hdrArchiveButton {
-  list-style-image: url("chrome://monterailoverlay/skin/icons/archive.svg");
+  list-style-image: url("chrome://monterailoverlay/content/skin/icons/archive.svg");
 }
 
 #hdrTrashButton {
-  list-style-image: url("chrome://monterailoverlay/skin/icons/delete.svg");
+  list-style-image: url("chrome://monterailoverlay/content/skin/icons/delete.svg");
 }

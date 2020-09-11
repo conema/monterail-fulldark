@@ -1,5 +1,3 @@
-@import url(chrome://app_version/skin/addressbook.css);
-
 #dirTree > treechildren {
   --treechildren-outline: none;
   --treechildren-selectedColor: transparent;
