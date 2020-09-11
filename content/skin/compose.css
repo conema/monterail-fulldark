@@ -4,8 +4,15 @@
 #msgIdentity,
 textbox.textbox-addressingWidget,
 .dummy-row-cell:last-child,
-#msgSubject {
+#msgSubject,
+.address-pill label:not(.error),
+.menubar-text,
+.menulist-description {
     color: #fff !important;
+}
+
+.address-pill.error {
+    background-color: rgba(255,0,0,0.8);
 }
 
 #appcontent {
@@ -15,7 +22,6 @@ textbox.textbox-addressingWidget,
 #msgIdentity:hover,
 #msgSubject:hover,
 textbox.textbox-addressingWidget:hover {
-    background: transparent !important;
     border-bottom: 1px solid var(--composer-header-border-color) !important;
 }
 
@@ -27,7 +33,7 @@ textbox.textbox-addressingWidget[focused="true"],
 
 #status-bar,
 #compose-toolbar-sizer {
-    background-color: var(--background-color-light) !important;
+    background-color: var(--background-color-inactive) !important;
     color: var(--message-list-text-color) !important;
     background-image: none !important;
 }
@@ -35,7 +41,7 @@ textbox.textbox-addressingWidget[focused="true"],
 #headers-box>#MsgHeadersToolbar,
 #FormatToolbox>#FormatToolbar {
     color: var(--message-list-text-color);
-    background-color: var(--background-color-light);
+    background-color: var(--background-color-inactive);
     -moz-appearance: none;
 }
 
@@ -61,14 +67,20 @@ textbox.textbox-addressingWidget[focused="true"],
     color: #fff;
 }
 
-.menubar-text,
-.menulist-description {
-    color: #fff !important;
+#msgIdentity:hover, 
+#msgIdentity:focus, 
+#msgIdentity[focused="true"], 
+.textbox-addressingWidget[focused="true"], 
+.textbox-addressingWidget:hover,
+#toAddrContainer {
+    background-color: var(--background-color);
+    color: #fff;
 }
 
-#msgSubject, #msgSubject:hover, #msgSubject[focused="true"], #msgIdentity:hover, #msgIdentity:focus, #msgIdentity[focused="true"], .textbox-addressingWidget[focused="true"], .textbox-addressingWidget:hover {
-    background-color: var(--background-color-light);
-    color: #fff;
+#msgSubject, 
+#msgSubject:hover, 
+#msgSubject[focused="true"] {
+    background-color: var(--background-color) !important;
 }
 
 #compose-toolbox>#composeToolbar2{
