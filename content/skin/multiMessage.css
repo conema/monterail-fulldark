@@ -1,4 +1,4 @@
-@import url(chrome://MonterailOverlay/content/skin/root.css);
+@import url(chrome://MonterailFDOverlay/content/skin/root.css);
 
 #heading_wrapper {
   color: #fff;
@@ -17,9 +17,9 @@
 }
 
 #hdrArchiveButton {
-  list-style-image: url("chrome://monterailoverlay/content/skin/icons/archive.svg");
+  list-style-image: url("chrome://MonterailFDOverlay/content/skin/icons/archive.svg");
 }
 
 #hdrTrashButton {
-  list-style-image: url("chrome://monterailoverlay/content/skin/icons/delete.svg");
+  list-style-image: url("chrome://MonterailFDOverlay/content/skin/icons/delete.svg");
 }

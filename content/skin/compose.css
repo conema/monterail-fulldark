@@ -1,5 +1,5 @@
-@import url(chrome://MonterailOverlay/content/skin/root.css);
-@import url(chrome://MonterailOverlay/content/skin/icons/css/compose.css);
+@import url(chrome://MonterailFDOverlay/content/skin/root.css);
+@import url(chrome://MonterailFDOverlay/content/skin/icons/css/compose.css);
 
 #msgIdentity,
 textbox.textbox-addressingWidget,

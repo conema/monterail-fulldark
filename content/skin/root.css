@@ -1,5 +1,5 @@
-@import url(chrome://MonterailOverlay/content/skin/icons/css/messenger.css);
-@import url(chrome://MonterailOverlay/content/skin/icons/css/folder.css);
+@import url(chrome://MonterailFDOverlay/content/skin/icons/css/messenger.css);
+@import url(chrome://MonterailFDOverlay/content/skin/icons/css/folder.css);
 
 @font-face {
     font-family: 'LightSans';

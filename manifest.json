@@ -4,7 +4,7 @@
   "description": "Monterail Full Dark, a Thunderbird theme inspired by the mockup of Monterail",
   "version": "3.0",
   "author": "Emanuele Concas",
-  "homepage_url": "https://addons.thunderbird.net/en-US/thunderbird/addon/monterail-fulldark/",
+  "homepage_url": "https://addons.thunderbird.net/en-US/thunderbird/addon/monterail-full-dark-2/",
   "applications": {
     "gecko": {
       "id": "MonterailFullDark2@conema.me",

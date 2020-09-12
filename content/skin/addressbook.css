@@ -1,5 +1,5 @@
-@import url(chrome://MonterailOverlay/content/skin/root.css);
-@import url(chrome://MonterailOverlay/content/skin/icons/css/adressbook.css);
+@import url(chrome://MonterailFDOverlay/content/skin/root.css);
+@import url(chrome://MonterailFDOverlay/content/skin/icons/css/adressbook.css);
 
 #ab-toolbox > #addrbook-toolbar-menubar2, #ab-toolbox > #ab-bar2 {
     background-color: var(--background-color) !important;
