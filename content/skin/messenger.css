@@ -381,7 +381,7 @@ treechildren:-moz-tree-twisty {
     color: #fff !important;
 }
 
-#today-pane-panel > sidebarheader {
+#today-pane-panel > .sidebar-header {
     border-bottom: 0;
 }
 
@@ -396,7 +396,7 @@ treechildren:-moz-tree-twisty {
     color: #fff !important;
 }
 
-#today-pane-panel > sidebarheader {
+#today-pane-panel > .sidebar-header {
     background: var(--background-color-light);
 }
 
@@ -419,7 +419,7 @@ treechildren:-moz-tree-twisty {
     color: #000;
 }
 
-sidebarheader > label {
+.sidebar-header > label {
     color: #fff;
 }
 
@@ -588,7 +588,7 @@ calendar-day-label[relation="today1day"],
 calendar-day-label[orient][relation="today"],
 .calendar-month-day-box-day-off .calendar-month-day-box-date-label,
 .minimonth-month-box,
-#today-pane-panel > sidebarheader,
+#today-pane-panel > .sidebar-header,
 calendar-minimonth {
     background: var(--background-color-light) !important;
 }
