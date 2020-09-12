@@ -609,13 +609,16 @@ calendar-header-container:not([rotated]) {
     border-color: var(--background-color-light) !important;
 }
 
-.minimonth-day[selected="true"], 
-.minimonth-day[interactive]:hover,
 #calendar-nav-control,
 minimonth-month-box,
 #calendar-nav-control .navigation-spacer-box,
 #calendar-nav-control .navigation-bottombox {
     background-color: var(--tree-background-color-selected);
+}
+
+.minimonth-day[selected="true"], 
+.minimonth-day[interactive]:hover {
+    background-color: var(--tree-background-color-selected) !important;
 }
 
 minimonth-day[today="true"] {
@@ -660,7 +663,10 @@ minimonth-header {
 #calendarWeek,
 .calendar-month-day-box-week-label,
 .calendar-month-day-box-date-label,
-#status-bar toolbarbutton {
+#status-bar toolbarbutton,
+.calendar-task-details-title,
+.task-details-name,
+.task-details-value {
     color: #fff !important;
 }
 
