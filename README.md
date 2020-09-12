@@ -6,8 +6,6 @@ _Monterail Full Dark, a Thunderbird theme inspired by the mockup of Monterail_
 ## Thunderbird v68
 WARNING: the last version is only compatible with Thunderbird 78.x
 
-**For this reason the theme is been converted to a legacy extension**, and for now it's working.
-
 ## What is this?
 This is a full theme for the Thunderbird e-mail client, inspired by [Monterail](https://monterail.com/blog/2016/the-power-of-email-clients-why-did-we-redesign-thunderbird) mockup and by [spymastermatt](https://github.com/spymastermatt/thunderbird-monterail)'s dark theme. As opposed to the spymastermatt's version, this theme can be **installed easily and quickly with an addon** and it's **compatible with Thunderbird 60.x and 78**. The previously versions are compatible also with Thunderbird 68.
 
