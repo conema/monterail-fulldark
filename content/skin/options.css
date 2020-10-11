@@ -1,0 +1,122 @@
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    position: relative;
+    width: 100%;
+}
+
+.input-group>input[type="number"] {
+    flex: 1 1 auto;
+    position: relative;
+    width: 1%;
+    margin-bottom: 0;
+}
+
+input[type="number"] {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    color: #99a6b7;
+    background-color: #fff;
+    border: 1px solid #e1e6f1;
+    border-radius: 3px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.input-group-append {
+    display: flex;
+}
+
+.input-group-append>span {
+    display: flex;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    margin-bottom: 0;
+    color: #596882;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #ebebef;
+    border: 1px solid #ebebef;
+    border-radius: 3px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.title {
+    margin-bottom: 10px;
+    color: #334151;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.subtitle {
+    height: 30px;
+    font-size: 13px;
+    color: #99a6b7;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.btn {
+    border-width: 0;
+    line-height: 1.538;
+    padding: 4px 10px;
+    border-radius: 4px;
+    min-height: 20px;
+
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 9pt;
+    color: #f9f9fa;
+
+    background-color: #3c3b37;
+    border-color: #3c3b37;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 45% 15%;
+    grid-template-rows: auto auto;
+    grid-column-gap: 45px;
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 40%;
+    margin: 20px auto;
+}
+
+.error, .success {
+    color: #fff;
+    padding: 1rem;
+    width: 100%;
+    display: none;
+}
+
+.error {
+    background-color: #dc3545;
+}
+
+.success {
+    background-color: #28a745;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="skin/options.css">
+</head>
+
+<body>
+    <div id="error" class="error"></div>
+    <div id="success" class="success"></div>
+
+    <form>
+        <div class="container">
+            <div class="info-group">
+                <p class="title">Message List Height</p>
+                <p class="subtitle">Set the messages height in px in the message list (email list)</p>
+            </div>
+            <div class="input-group">
+                <input id="messageListHeight" placeholder="40" type="number">
+                <div class="input-group-append">
+                    <span>px</span>
+                </div>
+            </div>
+
+            <div class="info-group">
+                <p class="title">Folder tree Height</p>
+                <p class="subtitle">Set the folders height in px in the folder tree</p>
+            </div>
+            <div class="input-group">
+                <input id="folderTreeHeight" placeholder="25" type="number">
+                <div class="input-group-append">
+                    <span>px</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-buttons">
+            <button id="submit" class="btn">Save settings</button>
+            <button id="reset" class="btn">Reset defaults</button>
+        </div>
+    </form>
+
+    <script src="scripts/options.js"></script>
+</body>
+
+</html>
