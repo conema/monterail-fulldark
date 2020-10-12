@@ -15,7 +15,7 @@ function saveOptions(e) {
 
     if (messageListInput.validationMessage || folderTreeInput.validationMessage){
         document.querySelector("#error").style.display = "block";
-        document.querySelector("#error").innerText = messageListInput.validationMessage + "<br>" + folderTreeInput.validationMessage;
+        document.querySelector("#error").innerText = messageListInput.validationMessage + "\n" + folderTreeInput.validationMessage;
         document.querySelector("#success").style.display = "none";
     } else {
         document.querySelector("#error").style.display = "none";
