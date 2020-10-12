@@ -15,12 +15,12 @@ function saveOptions(e) {
 
     if (messageListInput.validationMessage || folderTreeInput.validationMessage){
         document.querySelector("#error").style.display = "block";
-        document.querySelector("#error").innerHTML = messageListInput.validationMessage + "<br>" + folderTreeInput.validationMessage;
+        document.querySelector("#error").innerText = messageListInput.validationMessage + "<br>" + folderTreeInput.validationMessage;
         document.querySelector("#success").style.display = "none";
     } else {
         document.querySelector("#error").style.display = "none";
         document.querySelector("#success").style.display = "block";
-        document.querySelector("#success").innerHTML = "Settings saved. You must restart Thunderbird to see the changes.";
+        document.querySelector("#success").innerText = "Settings saved. You must restart Thunderbird to see the changes.";
     }
 }
 
@@ -36,7 +36,7 @@ function resetOptions(e) {
 
     document.querySelector("#error").style.display = "none";
     document.querySelector("#success").style.display = "block";
-    document.querySelector("#success").innerHTML = "Settings are restored. You must restart Thunderbird to see the changes.";
+    document.querySelector("#success").innerText = "Settings are restored. You must restart Thunderbird to see the changes.";
 }
 
 function restoreOptions() {
