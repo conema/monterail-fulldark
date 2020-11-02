@@ -22,6 +22,11 @@
    --treechildren-hoverBackground: var(--tree-background-color-hover);
    --treechildren-hoverCurrentBackground: var(--tree-background-color-hover);
    --treechildren-hoverSelectedBackground: var(--tree-background-color-selected);
+   background: var(--thread-background-color);
+}
+
+#abResultsTreeCols {
+    background: var(--background-color-light);
 }
 
 #ab-toolbox>#addrbook-toolbar-menubar2,
