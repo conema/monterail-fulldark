@@ -240,10 +240,21 @@ calendar-minimonth {
     background: var(--background-color-light) !important;
 }
 
+.calendar-month-day-box-other-month.calendar-month-day-box-day-off .calendar-month-day-box-date-label {
+    background-color: var(--viewMonthDayOtherBackground) !important;
+}
+
+.calendar-month-day-box-other-month .calendar-month-day-box-date-label {
+    color: #000 !important;
+}
+
 minimonth-header,
-.calendar-event-column-linebox[orient="vertical"],
 calendar-header-container:not([rotated]) {
-    border: none;
+    border-bottom: 1px #fff solid;
+}
+
+.calendar-event-column-header:first-child {
+    border-left: none;
 }
 
 .multiday-view-header-day-box[orient="horizontal"] {
@@ -341,8 +352,7 @@ calendar-multiweek-view,
 .navigation-bottombox,
 #calendar-view-splitter,
 .calendar-month-day-box-items-box,
-.multiday-view-header-day-box,
-.multiday-column-top-box {
+.multiday-view-header-day-box {
     background: var(--thread-background-color);
 }
 
@@ -362,17 +372,7 @@ calendar-day-label,
 .calendar-time-bar-box-even[orient="vertical"] {
     color: #fff !important;
     background-color: var(--background-color) !important;
-    border: none;
-}
-
-calendar-event-column[orient="vertical"],
-.calendar-time-bar-box-odd[off-time="true"], 
-.calendar-time-bar-box-even[off-time="true"],
-.multiday-view-header-time-spacer[orient="horizontal"],
-.multiday-view-label-box[orient="horizontal"] > .multiday-view-label-time-spacer,
-.multiday-view-label-day-box[orient="horizontal"],
-.multiday-view-header-day-box[orient="horizontal"] {
-    border: none;
+    border: none;*/
 }
 
 .calendar-task-tree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus), 
