@@ -210,14 +210,6 @@ specialFolder-Inbox, newMessages-true) {
     list-style-image: url("chrome:../spam.svg");
 }
 
-#threadTree:-moz-locale-dir(ltr)>treechildren::-moz-tree-image(correspondentCol, outgoing, focus, selected) {
-    list-style-image: url(chrome:/messenger/skin/icons/correspondents.svg#right-selected) !important;
-}
-
-#threadTree:-moz-locale-dir(rtl)>treechildren::-moz-tree-image(correspondentCol, outgoing, focus, selected) {
-    list-style-image: url(chrome:/messenger/skin/icons/correspondents.svg#left-selected) !important;
-}
-
 /* Lightning */
 
 #lightning-button-calendar {
