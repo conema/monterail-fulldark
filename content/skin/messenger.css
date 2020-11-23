@@ -188,6 +188,11 @@ toolbar[brighttext]>.toolbarbutton-1 {
     color: #fff !important;
 }
 
+#threadTree > treechildren::-moz-tree-cell-text(unread),
+#threadTree > treechildren::-moz-tree-cell(unread) {
+    font-family: 'EncodeSansSemiCondensed';
+}
+
 #folderTree>treechildren {
     --treechildren-hoverBackground: rgba(255,255,255,.1);
     --treechildren-hoverCurrentBackground: rgba(255,255,255,.1);
