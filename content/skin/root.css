@@ -1,28 +1,28 @@
 @import url(chrome://MonterailFDOverlay/content/skin/icons/css/messenger.css);
 @import url(chrome://MonterailFDOverlay/content/skin/icons/css/folder.css);
 
-/* encode-sans-semi-condensed-300 - latin-ext_latin */
+/* encode-sans-300 - latin-ext_latin */
 @font-face {
-    font-family: 'EncodeSansSemiCondensedLight';
+    font-family: 'EncodeSansLight';
     font-style: normal;
     font-weight: 300;
     src: local(''),
-         url('fonts/encode-sans-semi-condensed-v5-latin-ext_latin-300.woff2') format('woff2'), /* Super Modern Browsers */
-         url('fonts/encode-sans-semi-condensed-v5-latin-ext_latin-300.woff') format('woff'), /* Modern Browsers */
-         url('fonts/encode-sans-semi-condensed-v5-latin-ext_latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('fonts/encode-sans-semi-condensed-v5-latin-ext_latin-300.svg#EncodeSansSemiCondensed') format('svg'); /* Legacy iOS */
+         url('fonts/encode-sans-v7-latin-ext_latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/encode-sans-v7-latin-ext_latin-300.woff') format('woff'), /* Modern Browsers */
+         url('fonts/encode-sans-v7-latin-ext_latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/encode-sans-v7-latin-ext_latin-300.svg#EncodeSans') format('svg'); /* Legacy iOS */
   }
   
-/* encode-sans-semi-condensed-regular - latin-ext_latin */
+/* encode-sans-600 - latin-ext_latin */
 @font-face {
-    font-family: 'EncodeSansSemiCondensed';
+    font-family: 'EncodeSans';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     src: local(''),
-         url('fonts/encode-sans-semi-condensed-v5-latin-ext_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('fonts/encode-sans-semi-condensed-v5-latin-ext_latin-regular.woff') format('woff'), /* Modern Browsers */
-         url('fonts/encode-sans-semi-condensed-v5-latin-ext_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('fonts/encode-sans-semi-condensed-v5-latin-ext_latin-regular.svg#EncodeSansSemiCondensed') format('svg'); /* Legacy iOS */
+         url('fonts/encode-sans-v7-latin-ext_latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/encode-sans-v7-latin-ext_latin-600.woff') format('woff'), /* Modern Browsers */
+         url('fonts/encode-sans-v7-latin-ext_latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/encode-sans-v7-latin-ext_latin-600.svg#EncodeSans') format('svg'); /* Legacy iOS */
 }
 
 :root {
@@ -39,7 +39,8 @@
 	--tree-background-color-hover: rgba(255,255,255,.1);
 	
 	/* Fonts */
-    --default-font: EncodeSansSemiCondensed;
+    --default-font: EncodeSansLight;
+    --default-bold-font: EncodeSans;
     --message-list-text-color: #fff;
     --link-color: #80CAFE;
 	

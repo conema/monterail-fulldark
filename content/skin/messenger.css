@@ -190,7 +190,8 @@ toolbar[brighttext]>.toolbarbutton-1 {
 
 #threadTree > treechildren::-moz-tree-cell-text(unread),
 #threadTree > treechildren::-moz-tree-cell(unread) {
-    font-family: 'EncodeSansSemiCondensed';
+    font-family: var(--default-bold-font);
+    font-weight: 600 !important;
 }
 
 #folderTree>treechildren {
