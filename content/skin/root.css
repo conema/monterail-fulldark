@@ -1,11 +1,28 @@
 @import url(chrome://MonterailFDOverlay/content/skin/icons/css/messenger.css);
 @import url(chrome://MonterailFDOverlay/content/skin/icons/css/folder.css);
 
+/* encode-sans-300 - latin-ext_latin */
 @font-face {
-    font-family: 'LightSans';
-    src: url('fonts/encodesansnarrow-light.woff2') format('woff2'), url('fonts/encodesansnarrow-light.woff') format('woff'), url('fonts/encodesansnarrow-light.ttf') format('truetype'), url('fonts/encodesansnarrow-light.svg#encode_sans_narrowlight') format('svg');
-    font-weight: normal;
+    font-family: 'EncodeSansLight';
     font-style: normal;
+    font-weight: 300;
+    src: local(''),
+         url('fonts/encode-sans-v7-latin-ext_latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/encode-sans-v7-latin-ext_latin-300.woff') format('woff'), /* Modern Browsers */
+         url('fonts/encode-sans-v7-latin-ext_latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/encode-sans-v7-latin-ext_latin-300.svg#EncodeSans') format('svg'); /* Legacy iOS */
+  }
+  
+/* encode-sans-600 - latin-ext_latin */
+@font-face {
+    font-family: 'EncodeSans';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+         url('fonts/encode-sans-v7-latin-ext_latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/encode-sans-v7-latin-ext_latin-600.woff') format('woff'), /* Modern Browsers */
+         url('fonts/encode-sans-v7-latin-ext_latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/encode-sans-v7-latin-ext_latin-600.svg#EncodeSans') format('svg'); /* Legacy iOS */
 }
 
 :root {
@@ -22,7 +39,8 @@
 	--tree-background-color-hover: rgba(255,255,255,.1);
 	
 	/* Fonts */
-    --default-font: LightSans;
+    --default-font: EncodeSansLight;
+    --default-bold-font: EncodeSans;
     --message-list-text-color: #fff;
     --link-color: #80CAFE;
 	
@@ -51,6 +69,11 @@
 
 * {
     font-family: var(--default-font);
+    text-shadow: none !important; 
+}
+
+:root[lwtheme-image]:-moz-lwtheme-brighttext { 
+    text-shadow: none !important;
 }
 
 #appMenu-mainViewItems {
