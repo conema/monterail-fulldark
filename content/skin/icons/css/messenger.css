@@ -188,3 +188,9 @@ notification[value="draftMsgContent"] .messageImage {
 #calendar-delete-task-button {
     list-style-image: url("chrome:../delete.svg") !important;
 }
+
+#threadTree>treechildren::-moz-tree-image(unreadButtonColHeader),
+#threadTree>treechildren::-moz-tree-image(flaggedCol),
+#threadTree>treechildren::-moz-tree-image(correspondentCol) {
+    fill: #fff;
+}
