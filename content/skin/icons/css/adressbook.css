@@ -15,6 +15,7 @@
     padding-top: 1px;
     width: 9px;
     list-style-image: url("chrome:../twisty.svg") !important;
+    fill: #fff;
 }
 
 #dirTree>treechildren::-moz-tree-twisty(open) {
@@ -23,7 +24,8 @@
 }
 
 #abResultsTree>treechildren::-moz-tree-image(GeneratedName) {
-    list-style-image: url("chrome:../contact.svg") !important;
+    list-style-image: url("chrome:../addressbook.svg") !important;
+    fill: #fff;
 }
 
 #abResultsTree>treechildren::-moz-tree-image(GeneratedName, selected) {

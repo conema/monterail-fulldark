@@ -27,6 +27,7 @@
 
 #abResultsTreeCols {
     background: var(--background-color-light);
+    color: #fff;
 }
 
 #ab-toolbox>#addrbook-toolbar-menubar2,
@@ -75,11 +76,12 @@ toolbar[brighttext]>.toolbarbutton-1 {
     background-color: #fff;
 }
 
+#abResultsTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(),
 #abResultsTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected),
 #abResultsTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus),
 #dirTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text,
 #dirTree>treechildren:not(.autocomplete-treebody)::-moz-tree-cell-text(selected, focus) {
-    color: #fff;
+    color: #fff !important;
 }
 
 #dirTree>treechildren::-moz-tree-image,
