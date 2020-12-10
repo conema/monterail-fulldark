@@ -3,9 +3,9 @@
 
 /* encode-sans-300 - latin-ext_latin */
 @font-face {
-    font-family: 'EncodeSansLight';
+    font-family: 'EncodeSans';
     font-style: normal;
-    font-weight: 300;
+    font-weight: normal;
     src: local(''),
          url('fonts/encode-sans-v7-latin-ext_latin-300.woff2') format('woff2'), /* Super Modern Browsers */
          url('fonts/encode-sans-v7-latin-ext_latin-300.woff') format('woff'), /* Modern Browsers */
@@ -17,7 +17,7 @@
 @font-face {
     font-family: 'EncodeSans';
     font-style: normal;
-    font-weight: 600;
+    font-weight: bold;
     src: local(''),
          url('fonts/encode-sans-v7-latin-ext_latin-600.woff2') format('woff2'), /* Super Modern Browsers */
          url('fonts/encode-sans-v7-latin-ext_latin-600.woff') format('woff'), /* Modern Browsers */
@@ -39,8 +39,7 @@
 	--tree-background-color-hover: rgba(255,255,255,.1);
 	
 	/* Fonts */
-    --default-font: EncodeSansLight;
-    --default-bold-font: EncodeSans;
+    --default-font: 'EncodeSans';
     --message-list-text-color: #fff;
     --link-color: #80CAFE;
 	
