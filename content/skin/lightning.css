@@ -28,6 +28,10 @@
     color: #fff !important;
 }
 
+menulist > menupopup {
+    background-color: var(--background-color-inactive);
+}
+
 #today-pane-panel > .sidebar-header {
     border-bottom: 0;
 }
