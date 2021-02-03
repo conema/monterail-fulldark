@@ -4,6 +4,17 @@
 @import url(chrome://MonterailFDOverlay/content/skin/root.css);
 @import url("chrome://MonterailFDOverlay/content/skin/lightning.css");
 
+menupopup {
+    background-color: var(--background-color-inactive);
+    -moz-appearance: none;
+    color: #fff;
+}
+
+menuitem:hover,
+menupopup > menu:hover {
+    color: #fff;
+}
+
 .toolbarbutton-1:not([type="menu-button"]):not([disabled="true"]):-moz-any([open="true"], [checked="true"], :hover:active) {
     background: var(--toolbarbutton-active-background) !important;
     border-color: var(--toolbarbutton-active-bordercolor);
