@@ -1,6 +1,27 @@
 @import url(chrome://MonterailFDOverlay/content/skin/root.css);
 @import url(chrome://MonterailFDOverlay/content/skin/icons/css/compose.css);
 
+menupopup{
+    background-color: var(--background-color-inactive);
+    -moz-appearance: none !important;
+    color: #fff;
+}
+
+menuseparator {
+    border-top: 1px solid #656A6F;
+    border-bottom: none;
+    -moz-appearance: none;
+    margin: 6px 20px;
+    padding: 0;
+}
+
+menupopup > menu:not(:active),
+menuitem:hover:not([disabled="true"]),
+menupopup > menu:hover:not([disabled="true"]),
+menuitem label:hover:not([disabled="true"]) {
+    color: #fff !important;
+}
+
 #msgIdentity,
 textbox.textbox-addressingWidget,
 .dummy-row-cell:last-child,

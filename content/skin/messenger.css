@@ -4,15 +4,17 @@
 @import url(chrome://MonterailFDOverlay/content/skin/root.css);
 @import url("chrome://MonterailFDOverlay/content/skin/lightning.css");
 
-menupopup {
+menupopup{
     background-color: var(--background-color-inactive);
-    -moz-appearance: none;
+    -moz-appearance: none !important;
     color: #fff;
 }
 
-menuitem:hover,
-menupopup > menu:hover {
-    color: #fff;
+menupopup > menu:not(:active),
+menuitem:hover:not([disabled="true"]),
+menupopup > menu:hover:not([disabled="true"]),
+menuitem label:hover:not([disabled="true"]) {
+    color: #fff !important;
 }
 
 .toolbarbutton-1:not([type="menu-button"]):not([disabled="true"]):-moz-any([open="true"], [checked="true"], :hover:active) {
@@ -21,6 +23,14 @@ menupopup > menu:hover {
     box-shadow: var(--toolbarbutton-active-boxshadow) !important;
     transition-duration: 10ms;
     background-image: none !important;
+}
+
+menuseparator {
+    border-top: 1px solid #656A6F;
+    border-bottom: none;
+    -moz-appearance: none;
+    margin: 6px 20px;
+    padding: 0;
 }
 
 #tabbar-toolbar .toolbarbutton-icon,

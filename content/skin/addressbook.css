@@ -1,10 +1,32 @@
 @import url(chrome://MonterailFDOverlay/content/skin/root.css);
 @import url(chrome://MonterailFDOverlay/content/skin/icons/css/adressbook.css);
 
+menuseparator {
+    border-top: 1px solid #656A6F;
+    border-bottom: none;
+    -moz-appearance: none;
+    margin: 6px 20px;
+    padding: 0;
+}
+
+menupopup{
+    background-color: var(--background-color-inactive);
+    -moz-appearance: none !important;
+    color: #fff;
+}
+
+menu:hover,
+menu:not(:active),
+menupopup > menu:not(:active),
+menuitem:hover:not([disabled="true"]),
+menupopup > menu:hover:not([disabled="true"]),
+menuitem label:hover:not([disabled="true"]) {
+    color: #fff !important;
+}
+
 #ab-toolbox > #addrbook-toolbar-menubar2, #ab-toolbox > #ab-bar2 {
     background-color: var(--background-color) !important;
 }
-
 
 #dirTree > treechildren {
    --treechildren-selectedBackground: rgba(255,255,255,.2);

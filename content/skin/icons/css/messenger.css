@@ -1,3 +1,13 @@
+#menu_getnewmsgs_all_accounts {
+    list-style-image: url("chrome:../getmsg.svg") !important;
+    -moz-context-properties: fill;
+    fill: currentColor;
+}
+
+#menu_getnewmsgs_all_accounts[disabled="true"] {
+    fill: GrayText !important;
+}
+
 .toolbarbutton-1 .toolbarbutton-menu-dropmarker, 
 .toolbarbutton-1 > .toolbarbutton-menubutton-dropmarker,
 .subviewbutton > .toolbarbutton-icon,
