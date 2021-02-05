@@ -1,7 +1,9 @@
 @import url(chrome://MonterailFDOverlay/content/skin/root.css);
 @import url(chrome://MonterailFDOverlay/content/skin/icons/css/compose.css);
 
-menupopup{
+menupopup,
+menulist > menupopup,
+menulist > menupopup > menuitem {
     background-color: var(--background-color-inactive);
     -moz-appearance: none !important;
     color: #fff;
