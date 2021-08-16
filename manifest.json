@@ -2,13 +2,13 @@
   "manifest_version": 2,
   "name": "Monterail Full Dark",
   "description": "Monterail Full Dark, a Thunderbird theme inspired by the mockup of Monterail",
-  "version": "3.2.3",
+  "version": "3.3",
   "author": "Emanuele Concas",
   "homepage_url": "https://addons.thunderbird.net/en-US/thunderbird/addon/monterail-full-dark-2/",
   "applications": {
     "gecko": {
       "id": "MonterailFullDark2@conema.me",
-      "strict_min_version": "78.0"
+      "strict_min_version": "91.0"
     }
   },
   "icons": {
