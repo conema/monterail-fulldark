@@ -14,11 +14,22 @@
     -moz-context-properties: fill, fill-opacity;
 }
 
-#today-pane-panel, #mini-day-box, #agenda-toolbar, #todo-tab-panel, #mini-day-box stack, #miniday-dropdown-button, #mini-day-box > stack > hbox > vbox {
+#today-pane-panel, 
+#mini-day-box, 
+#agenda-toolbar, 
+#todo-tab-panel, 
+#mini-day-box stack, 
+#miniday-dropdown-button, 
+#mini-day-box > stack > hbox > vbox,
+#calendar-panel {
     background-color: var(--background-color);
 }
 
-#agenda-toolbar:-moz-window-inactive, #todo-tab-panel:-moz-window-inactive, #mini-day-box:-moz-window-inactive, #mini-day-box stack:-moz-window-inactive, #today-pane-splitter:-moz-window-inactive {
+#agenda-toolbar:-moz-window-inactive, 
+#todo-tab-panel:-moz-window-inactive, 
+#mini-day-box:-moz-window-inactive, 
+#mini-day-box stack:-moz-window-inactive, 
+#today-pane-splitter:-moz-window-inactive {
     background-color: var(--background-color) !important;
 }
 
@@ -28,7 +39,8 @@
     color: #fff !important;
 }
 
-menulist > menupopup {
+menulist > menupopup,
+#minimonth-splitter {
     background-color: var(--background-color-inactive);
 }
 

@@ -43,7 +43,7 @@
     --message-list-text-color: #fff;
     --link-color: #80CAFE;
 	
-	/*Message row & Folder row height */
+	/* Message row & Folder row height */
     --message-list-row-height: 40px;
 	--folder-tree-row-height: 25px;
 	
@@ -64,7 +64,7 @@
     --dateColor: var(--background-color);
     --barHlColor: var(--tree-background-color-selected);
     --barColor: var(--tree-background-color-selected);
-}
+}   
 
 * {
     font-family: var(--default-font);
